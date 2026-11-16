@@ -11,7 +11,7 @@ Dự án hướng đến việc ứng dụng công nghệ số trong bảo tồn
 
 - Lưu giữ và phát huy bản sắc văn hóa truyền thống Hrê.
 - Số hóa các tư liệu, hình ảnh và câu chuyện văn hóa.
-- Giới thiệu những nét đẹp trong đời sống vật chất và tinh thần.
+- Giới thiệu những nét đẹp trong đời sống vật chất và tinh thần của người H're.
 - Góp phần giáo dục truyền thống, đặc biệt đối với thế hệ trẻ.
 - Quảng bá văn hóa Hrê đến bạn bè trong và ngoài nước.
 
