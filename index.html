@@ -209,6 +209,40 @@ footer h3 { color: #ffffff; margin-bottom: 20px; font-size: 18px; letter-spacing
 footer p { font-size: 15px; margin-bottom: 10px; color: #fbd38d; }
 .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 25px; font-size: 13.5px; color: #d6bc98; }
 
+/* CSS CHO 4 BÀI VIẾT VĂN HÓA (BỔ SUNG) */
+.vanho-article { 
+  display: none; 
+  padding-top: 40px; 
+}
+.article-shell {
+  max-width: 900px; 
+  margin: auto; 
+  background: #ffffff; 
+  padding: 45px 40px; 
+  border-radius: 12px; 
+  box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); 
+  border-left: 6px solid var(--fire); 
+  border-right: 1px solid #f3e5db; 
+  border-top: 1px solid #f3e5db; 
+  border-bottom: 1px solid #f3e5db;
+}
+.article-cover {
+  width: 100%; 
+  height: 380px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  margin-bottom: 25px; 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.article-shell h3 { color: var(--earth); margin-top: 25px; margin-bottom: 15px; font-size: 22px; }
+.article-shell p { font-size: 16.5px; margin-bottom: 16px; color: var(--text); line-height: 1.8; text-align: justify; }
+.article-close {
+  padding: 10px 24px; background: var(--fire); color: white; 
+  border: none; border-radius: 5px; cursor: pointer; 
+  font-weight: bold; transition: 0.3s; margin-top: 20px;
+}
+.article-close:hover { background: #c2410c; transform: translateY(-2px); }
+
 /* MOBILE RESPONSIVE */
 @media(max-width: 850px) {
   nav { 
@@ -267,11 +301,12 @@ footer p { font-size: 15px; margin-bottom: 10px; color: #fbd38d; }
      </li>
      <li>
        <a href="#vanhoa">VĂN HÓA ▾</a>
+       <!-- ĐÃ CẬP NHẬT ONCLICK ĐỂ MỞ 4 BÀI VIẾT -->
        <div class="dropdown">
-         <a href="#trangphuc">Trang phục truyền thống</a>
-         <a href="#amnhac">Âm nhạc & Dân ca</a>
-         <a href="#nhasan">Kiến trúc nhà sàn</a>
-         <a href="#langnghe">Làng nghề thủ công</a>
+         <a href="#trangphuc" onclick="toggleVanHoa(event, 'trangphuc')">Trang phục truyền thống</a>
+         <a href="#amnhac" onclick="toggleVanHoa(event, 'amnhac')">Âm nhạc & Dân ca</a>
+         <a href="#nhasan" onclick="toggleVanHoa(event, 'nhasan')">Kiến trúc nhà sàn</a>
+         <a href="#langnghe" onclick="toggleVanHoa(event, 'langnghe')">Làng nghề thủ công</a>
        </div>
      </li>
      <li>
@@ -342,13 +377,14 @@ footer p { font-size: 15px; margin-bottom: 10px; color: #fbd38d; }
   <p>Mỗi nét văn hóa là một câu chuyện, một ký ức đượm mùi khói bếp và một niềm tự hào của cộng đồng.</p>
  </div>
  <div class="cards">
+  <!-- CẬP NHẬT CÁC NÚT "TÌM HIỂU THÊM" -->
   <article class="card">
    <img src="naubanhtet.jpg" alt="Sinh hoạt văn hóa cộng đồng" onerror="this.src='https://images.unsplash.com/photo-1596422846543-74c6ca27bb13?auto=format&fit=crop&w=800&q=80'">
    <div class="card-body">
      <h3>Trang phục thổ cẩm</h3>
      <p>Sự giao hòa giữa màu đen của đất, màu đỏ của lửa dệt nên hoa văn truyền thống tinh xảo của đồng bào H'rê.</p>
      <img src="trang-phuc.jfif" alt="Trang phục H'rê" style="border-radius: 8px; margin-top: 15px; border:none; height: 120px;" onerror="this.style.display='none'">
-     <a href="#thuvien" class="btn-link">TÌM HIỂU THÊM →</a>
+     <a href="#trangphuc" class="btn-link" onclick="toggleVanHoa(event, 'trangphuc')">TÌM HIỂU THÊM →</a>
    </div>
   </article>
 
@@ -364,7 +400,7 @@ footer p { font-size: 15px; margin-bottom: 10px; color: #fbd38d; }
          Trình duyệt không hỗ trợ thẻ audio.
        </audio>
      </div>
-     <a href="#thuvien" class="btn-link">TÌM HIỂU THÊM →</a>
+     <a href="#amnhac" class="btn-link" onclick="toggleVanHoa(event, 'amnhac')">TÌM HIỂU THÊM →</a>
    </div>
   </article>
 
@@ -389,7 +425,7 @@ footer p { font-size: 15px; margin-bottom: 10px; color: #fbd38d; }
    <div class="card-body">
      <h3>Nếp nhà và Làng bản</h3>
      <p>Những mái nhà sàn nép mình bên sườn đồi, khói lam chiều vấn vương hòa cùng nhịp sống mộc mạc.</p>
-     <a href="#thuvien" class="btn-link">TÌM HIỂU THÊM →</a>
+     <a href="#nhasan" class="btn-link" onclick="toggleVanHoa(event, 'nhasan')">TÌM HIỂU THÊM →</a>
    </div>
   </article>
 
@@ -407,14 +443,13 @@ footer p { font-size: 15px; margin-bottom: 10px; color: #fbd38d; }
    <div class="card-body">
      <h3>Bàn tay tài hoa</h3>
      <p>Nghề dệt thổ cẩm, đan lát mây tre truyền thống được các nghệ nhân gửi gắm linh hồn của đại ngàn.</p>
-     <a href="#thuvien" class="btn-link">TÌM HIỂU THÊM →</a>
+     <a href="#langnghe" class="btn-link" onclick="toggleVanHoa(event, 'langnghe')">TÌM HIỂU THÊM →</a>
    </div>
   </article>
  </div>
 </section>
 <!-- ===================================================== -->
-<!-- 04 BÀI VIẾT CHI TIẾT MỤC VĂN HÓA - PHẦN BỔ SUNG -->
-<!-- Nội dung cũ của website được giữ nguyên -->
+<!-- 04 BÀI VIẾT CHI TIẾT MỤC VĂN HÓA - ĐÃ ÁP DỤNG CSS MỚI -->
 <!-- ===================================================== -->
 <section class="section vanho-article" id="trangphuc">
   <div class="heading"><span>SẮC MÀU VĂN HÓA</span><h2>TRANG PHỤC TRUYỀN THỐNG</h2><p>Sắc màu thổ cẩm – Nét đẹp trang phục truyền thống của người Hrê</p></div>
@@ -778,7 +813,7 @@ footer p { font-size: 15px; margin-bottom: 10px; color: #fbd38d; }
   </a>
   <a href="sarung.jpg" class="glightbox gallery-item" data-title="Trái sả rừng">
     <img src="sarung.jpg" alt="Trái sả rừng">
-    </a>
+  </a>
   <a href="vannghehre.jpg" class="glightbox gallery-item" data-title="Đội Văn nghệ Bùi Hui">
     <img src="vannghehre.jpg" alt="Đội Văn nghệ Bùi Hui">
   </a> 
@@ -805,6 +840,7 @@ footer p { font-size: 15px; margin-bottom: 10px; color: #fbd38d; }
   </a>
     <a href="hocsinh.jpg" class="glightbox gallery-item" data-title="Học sinh xã Ba Trang">
     <img src="hocsinh.jpg" alt="Học sinh xã Ba Trang">
+  </a>
 <a href="hocsinhbatrang.jpg" class="glightbox gallery-item" data-title="Học sinh trải nghiệm thảo nguyên Bùi Hui">
   <img src="hocsinhbatrang.jpg" alt="Học sinh trải nghiệm thảo nguyên Bùi Hui">
 </a>
@@ -911,7 +947,20 @@ function toggleMenu(event) {
   menu.classList.toggle("hien-thi");
 }
 
-// 4. Ẩn/Hiện bài viết Triết lý ẩm thực
+// 4. Hàm điều khiển 4 bài viết Văn Hóa (MỚI BỔ SUNG)
+function toggleVanHoa(event, articleId) {
+  if(event) event.preventDefault();
+  
+  var section = document.getElementById(articleId);
+  if (section.style.display === "none" || section.style.display === "") {
+    section.style.display = "block";
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    section.style.display = "none";
+  }
+}
+
+// 5. Ẩn/Hiện bài viết Triết lý ẩm thực
 function toggleTrietLy(event) {
   if(event) event.preventDefault(); 
   
@@ -924,7 +973,7 @@ function toggleTrietLy(event) {
   }
 }
 
-// 5. Ẩn/Hiện bài viết Các món ăn truyền thống
+// 6. Ẩn/Hiện bài viết Các món ăn truyền thống
 function toggleMonAn(event) {
   if(event) event.preventDefault(); 
   
@@ -937,7 +986,7 @@ function toggleMonAn(event) {
   }
 }
 
-// 6. Ẩn/Hiện bài viết Dân cư
+// 7. Ẩn/Hiện bài viết Dân cư
 function toggleDanCu(event) {
   if(event) event.preventDefault();
   
@@ -950,7 +999,7 @@ function toggleDanCu(event) {
   }
 }
 
-// 7. Ẩn/Hiện bài viết Thức uống truyền thống
+// 8. Ẩn/Hiện bài viết Thức uống truyền thống
 function toggleThucUong(event) {
   if(event) event.preventDefault(); 
   
@@ -963,7 +1012,7 @@ function toggleThucUong(event) {
   }
 }
 
-// 8. Ẩn/Hiện bài viết Lễ mừng lúa mới
+// 9. Ẩn/Hiện bài viết Lễ mừng lúa mới
 function toggleMungLuaMoi(event) {
   if(event) event.preventDefault(); 
   
@@ -976,7 +1025,7 @@ function toggleMungLuaMoi(event) {
   }
 }
 
-// 9. Đồng hồ thời gian thực
+// 10. Đồng hồ thời gian thực
 function updateClock() {
     const now = new Date();
     const timeStr = now.toLocaleTimeString('vi-VN', { hour12: false });
