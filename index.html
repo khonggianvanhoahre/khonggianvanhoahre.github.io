@@ -11,40 +11,40 @@
 
 <style>
 :root {
-  /* BẢNG MÀU LÀNG QUÊ SÁNG (LIGHT THEME) */
-  --earth: #9c4b22;     
-  --wood: #c98255;      
-  --fire: #ea580c;      
-  --ember: #f97316;     
-  --straw: #fffaf4;     
-  --header-bg: #ffffff; 
-  --footer-bg: #4a2815; 
-  --text: #452616;      
-  --text-light: #704733;
+  /* BẢNG MÀU LÀNG QUÊ SÁNG (LIGHT THEME) */
+  --earth: #9c4b22;     
+  --wood: #c98255;      
+  --fire: #ea580c;      
+  --ember: #f97316;     
+  --straw: #fffaf4;     
+  --header-bg: #ffffff; 
+  --footer-bg: #4a2815; 
+  --text: #452616;      
+  --text-light: #704733;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
+- { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text);
-  background: var(--straw);
-  line-height: 1.7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: var(--straw);
+  line-height: 1.7;
 }
 h1, h2, h3, h4, h5, h6 { line-height: 1.4; }
 a { text-decoration: none; color: inherit; }
 
 /* HEADER & MENU (NỀN SÁNG, VIỀN CAM) */
 header {
-  background: var(--header-bg);
-  color: var(--text);
-  position: sticky; top: 0; z-index: 100;
-  border-bottom: 2px solid var(--fire);
-  box-shadow: 0 4px 15px rgba(234, 88, 12, 0.1); 
+  background: var(--header-bg);
+  color: var(--text);
+  position: sticky; top: 0; z-index: 100;
+  border-bottom: 2px solid var(--fire);
+  box-shadow: 0 4px 15px rgba(234, 88, 12, 0.1); 
 }
 .nav {
-  max-width: 1200px; margin: auto; padding: 10px 22px;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 20px;
+  max-width: 1200px; margin: auto; padding: 10px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px;
 }
 .brand { font-size: 20px; font-weight: 900; color: var(--fire); text-transform: uppercase; line-height: 1.4; padding-bottom: 4px; }
 .brand small { display: block; font-size: 10px; letter-spacing: 3px; color: var(--wood); margin-top: 3px; font-weight: 600;}
@@ -54,56 +54,54 @@ nav { display: block; }
 nav ul { list-style: none; display: flex; gap: 24px; align-items: center; }
 nav li { position: relative; }
 nav > ul > li > a {
-  font-size: 14px; color: var(--text); font-weight: 700;
-  display: flex; align-items: center; gap: 5px;
-  padding: 15px 0; transition: 0.3s;
+  font-size: 14px; color: var(--text); font-weight: 700;
+  display: flex; align-items: center; gap: 5px;
+  padding: 15px 0; transition: 0.3s;
 }
 nav a:hover { color: var(--fire); }
 
 /* Sub-menu */
 nav .dropdown {
-  position: absolute; top: 100%; left: 0;
-  margin-top: 15px; 
-  background: #ffffff; min-width: 240px;
-  display: flex; flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border-radius: 6px; border-top: 3px solid var(--fire);
-  opacity: 0; visibility: hidden;
-  transform: translateY(10px); transition: all 0.3s ease; z-index: 200;
+  position: absolute; top: 100%; left: 0;
+  margin-top: 15px; 
+  background: #ffffff; min-width: 240px;
+  display: flex; flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 6px; border-top: 3px solid var(--fire);
+  opacity: 0; visibility: hidden;
+  transform: translateY(10px); transition: all 0.3s ease; z-index: 200;
 }
 nav li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
 nav .dropdown a {
-  display: block; 
-  padding: 14px 20px; font-size: 14px; font-weight: 500;
-  border-bottom: 1px solid #f0e6dc; color: var(--text);
-  line-height: 1.5;
+  display: block; 
+  padding: 14px 20px; font-size: 14px; font-weight: 500;
+  border-bottom: 1px solid #f0e6dc; color: var(--text);
+  line-height: 1.5;
 }
 nav .dropdown a:last-child { border-bottom: none; }
 nav .dropdown a:hover { background: #fff5eb; color: var(--fire); padding-left: 26px; transition: 0.2s; }
 
 .menu-btn {
-  display: none; background: none; border: 1px solid var(--wood);
-  color: var(--fire); padding: 7px 12px; border-radius: 6px; font-size: 20px; cursor: pointer;
+  display: none; background: none; border: 1px solid var(--wood);
+  color: var(--fire); padding: 7px 12px; border-radius: 6px; font-size: 20px; cursor: pointer;
 }
 
 /* HERO SECTION */
 .hero {
-  min-height: 550px;
-  /* Chỉnh lại gradient overlay mỏng dần về bên phải để lộ rõ ảnh núi đồi, mây */
-  background:
-    linear-gradient(90deg, rgba(156, 75, 34, 0.85) 0%, rgba(200, 80, 20, 0.45) 50%, rgba(0, 0, 0, 0.1) 100%),
-    url("image_548022.jpg") center/cover no-repeat;
-  display: flex; align-items: center; color: white;
+  min-height: 550px;
+  background:
+    linear-gradient(90deg, rgba(156, 75, 34, 0.9), rgba(234, 88, 12, 0.4)),
+    url("thaonguyen.jpg") center/cover;
+  display: flex; align-items: center; color: white;
 }
 .hero-content { max-width: 1200px; margin: auto; padding: 80px 25px; width: 100%; }
 .eyebrow { color: #fed7aa; letter-spacing: 3px; font-size: 13px; font-weight: bold; text-transform: uppercase; }
-/* Đảm bảo màu chữ nổi bật, dễ đọc trên nền ảnh */
-.hero h1 { font-size: clamp(35px, 6vw, 62px); line-height: 1.15; max-width: 780px; margin: 20px 0; color: #ffffff; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
-.hero p { max-width: 620px; font-size: 18px; color: #ffffff; text-shadow: 1px 1px 6px rgba(0,0,0,0.5); }
+.hero h1 { font-size: clamp(35px, 6vw, 62px); line-height: 1.15; max-width: 780px; margin: 20px 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+.hero p { max-width: 620px; font-size: 18px; color: #ffedd5; }
 .btn {
-  display: inline-block; background: var(--fire); color: white;
-  padding: 14px 28px; border-radius: 6px; font-weight: bold; margin-top: 28px;
-  transition: 0.3s; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4);
+  display: inline-block; background: var(--fire); color: white;
+  padding: 14px 28px; border-radius: 6px; font-weight: bold; margin-top: 28px;
+  transition: 0.3s; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4);
 }
 .btn:hover { background: #c2410c; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(234, 88, 12, 0.5); }
 
@@ -116,9 +114,9 @@ nav .dropdown a:hover { background: #fff5eb; color: var(--fire); padding-left: 2
 
 .intro-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: center; }
 .intro-image {
-  min-height: 400px; border-radius: 12px;
-  box-shadow: -15px 15px 0px #fed7aa; 
-  background: url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85") center/cover;
+  min-height: 400px; border-radius: 12px;
+  box-shadow: -15px 15px 0px #fed7aa; 
+  background: url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85") center/cover;
 }
 .intro-text h3 { font-size: 28px; color: var(--earth); margin-bottom: 20px; }
 .intro-text p { margin-bottom: 16px; color: var(--text-light); }
@@ -127,10 +125,10 @@ nav .dropdown a:hover { background: #fff5eb; color: var(--fire); padding-left: 2
 .bg-warm { background: #fff1e6; border-top: 1px solid #fcdbce; border-bottom: 1px solid #fcdbce; }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .card {
-  background: #ffffff; border-radius: 12px; overflow: hidden;
-  border: 1px solid #f3e5db;
-  box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); transition: 0.3s;
-  display: flex; flex-direction: column;
+  background: #ffffff; border-radius: 12px; overflow: hidden;
+  border: 1px solid #f3e5db;
+  box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); transition: 0.3s;
+  display: flex; flex-direction: column;
 }
 .card:hover { transform: translateY(-8px); border-color: #fca5a5; box-shadow: 0 15px 35px rgba(234, 88, 12, 0.15); }
 img { max-width: 100%; height: auto; }
@@ -144,8 +142,8 @@ audio { max-width: 100%; border-radius: 8px; height: 35px; outline: none; }
 
 /* Menu nhánh con trong Card */
 .menu-con {
-  display: none; list-style: none; padding: 0; margin-top: 15px;
-  background-color: #fff9f5; border-radius: 6px; border: 1px dashed #fdba74;
+  display: none; list-style: none; padding: 0; margin-top: 15px;
+  background-color: #fff9f5; border-radius: 6px; border: 1px dashed #fdba74;
 }
 .menu-con.hien-thi { display: block; }
 .menu-con li a { display: block; padding: 12px 15px; text-decoration: none; color: var(--text); font-size: 14px; border-bottom: 1px dashed #fed7aa; font-weight: 500; line-height: 1.5;}
@@ -153,40 +151,40 @@ audio { max-width: 100%; border-radius: 8px; height: 35px; outline: none; }
 .menu-con li a:hover { color: var(--fire); background: #fff2e6; padding-left: 20px; transition: 0.2s; }
 
 /* QUOTE */
-.quote { 
-  background: linear-gradient(rgba(156, 75, 34, 0.85), rgba(156, 75, 34, 0.95)), 
-              url('https://images.unsplash.com/photo-1533559388836-8e5033c4eb3a?auto=format&fit=crop&w=1200&q=80') center/cover fixed; 
-  color: white; text-align: center; padding: 90px 20px;
+.quote { 
+  background: linear-gradient(rgba(156, 75, 34, 0.85), rgba(156, 75, 34, 0.95)), 
+              url('https://images.unsplash.com/photo-1533559388836-8e5033c4eb3a?auto=format&fit=crop&w=1200&q=80') center/cover fixed; 
+  color: white; text-align: center; padding: 90px 20px;
 }
 .quote h2 { font-size: 34px; color: #fed7aa; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
 .quote p { max-width: 800px; margin: auto; font-size: 19px; color: #ffedd5; line-height: 1.8; }
 
 /* THƯ VIỆN (Grid + Zoom) */
 .library {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 .gallery-item {
-  display: block;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  position: relative;
-  transition: 0.3s;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  position: relative;
+  transition: 0.3s;
 }
 .gallery-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 .gallery-item:hover {
-  box-shadow: 0 10px 25px rgba(234, 88, 12, 0.2);
+  box-shadow: 0 10px 25px rgba(234, 88, 12, 0.2);
 }
 .gallery-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .callout { background: #ffedd5; border-left: 6px solid var(--fire); padding: 35px; border-radius: 8px; margin-top: 50px; }
@@ -196,11 +194,11 @@ audio { max-width: 100%; border-radius: 8px; height: 35px; outline: none; }
 .visitor-counter { margin-top: 25px; }
 .visitor-counter p { margin-bottom: 8px; font-size: 15px; color: #fbd38d; display: flex; align-items: center; }
 .visitor-counter .digit {
-  background: #f44336; 
-  color: white; font-weight: bold; font-family: 'Courier New', Courier, monospace;
-  padding: 3px 6px; margin: 0 2px;
-  border-radius: 4px; font-size: 17px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  background: #f44336; 
+  color: white; font-weight: bold; font-family: 'Courier New', Courier, monospace;
+  padding: 3px 6px; margin: 0 2px;
+  border-radius: 4px; font-size: 17px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 #live-time { margin-top: 8px; font-size: 14px; color: #fed7aa; font-family: 'Segoe UI', sans-serif;}
 
@@ -212,707 +210,706 @@ footer p { font-size: 15px; margin-bottom: 10px; color: #fbd38d; }
 .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 25px; font-size: 13.5px; color: #d6bc98; }
 
 /* CSS CHO 4 BÀI VIẾT VĂN HÓA (BỔ SUNG) */
-.vanho-article { 
-  display: none; 
-  padding-top: 40px; 
+.vanho-article { 
+  display: none; 
+  padding-top: 40px; 
 }
 .article-shell {
-  max-width: 900px; 
-  margin: auto; 
-  background: #ffffff; 
-  padding: 45px 40px; 
-  border-radius: 12px; 
-  box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); 
-  border-left: 6px solid var(--fire); 
-  border-right: 1px solid #f3e5db; 
-  border-top: 1px solid #f3e5db; 
-  border-bottom: 1px solid #f3e5db;
+  max-width: 900px; 
+  margin: auto; 
+  background: #ffffff; 
+  padding: 45px 40px; 
+  border-radius: 12px; 
+  box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); 
+  border-left: 6px solid var(--fire); 
+  border-right: 1px solid #f3e5db; 
+  border-top: 1px solid #f3e5db; 
+  border-bottom: 1px solid #f3e5db;
 }
 .article-cover {
-  width: 100%; 
-  height: 380px; 
-  object-fit: cover; 
-  border-radius: 8px; 
-  margin-bottom: 25px; 
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 100%; 
+  height: 380px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  margin-bottom: 25px; 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 .article-shell h3 { color: var(--earth); margin-top: 25px; margin-bottom: 15px; font-size: 22px; }
 .article-shell p { font-size: 16.5px; margin-bottom: 16px; color: var(--text); line-height: 1.8; text-align: justify; }
 .article-close {
-  padding: 10px 24px; background: var(--fire); color: white; 
-  border: none; border-radius: 5px; cursor: pointer; 
-  font-weight: bold; transition: 0.3s; margin-top: 20px;
+  padding: 10px 24px; background: var(--fire); color: white; 
+  border: none; border-radius: 5px; cursor: pointer; 
+  font-weight: bold; transition: 0.3s; margin-top: 20px;
 }
 .article-close:hover { background: #c2410c; transform: translateY(-2px); }
 
 /* MOBILE RESPONSIVE */
 @media(max-width: 850px) {
-  nav { 
-    display: none; position: absolute; top: 65px; left: 0; right: 0; 
-    background: #ffffff; padding: 20px; border-bottom: 3px solid var(--fire);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-  nav.open { display: block; }
-  nav ul { flex-direction: column; align-items: flex-start; gap: 5px; width: 100%; }
-  nav li { width: 100%; border-bottom: 1px solid #f0e6dc; }
-  nav li:last-child { border-bottom: none; }
-  nav > ul > li > a { padding: 15px 0; width: 100%; justify-content: space-between; font-size: 15px; }
-  nav .dropdown {
-    position: static; box-shadow: none; background: #fff9f5;
-    opacity: 1; visibility: visible; transform: none; border: none;
-    display: none; border-left: 3px solid var(--fire); margin-left: 10px; margin-bottom: 15px;
-    height: auto;
-  }
-  nav li:hover .dropdown { display: flex; }
-  nav .dropdown a { padding: 12px 15px; border-bottom: 1px solid #fce7d2; color: var(--text); display: block; white-space: normal; }
-  .menu-btn { display: block; }
-  .intro-grid { grid-template-columns: 1fr; gap: 40px; }
-  .intro-image { min-height: 280px; box-shadow: none; }
-  .cards { grid-template-columns: repeat(2, 1fr); }
-  .library { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+  nav { 
+    display: none; position: absolute; top: 65px; left: 0; right: 0; 
+    background: #ffffff; padding: 20px; border-bottom: 3px solid var(--fire);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  nav.open { display: block; }
+  nav ul { flex-direction: column; align-items: flex-start; gap: 5px; width: 100%; }
+  nav li { width: 100%; border-bottom: 1px solid #f0e6dc; }
+  nav li:last-child { border-bottom: none; }
+  nav > ul > li > a { padding: 15px 0; width: 100%; justify-content: space-between; font-size: 15px; }
+  nav .dropdown {
+    position: static; box-shadow: none; background: #fff9f5;
+    opacity: 1; visibility: visible; transform: none; border: none;
+    display: none; border-left: 3px solid var(--fire); margin-left: 10px; margin-bottom: 15px;
+    height: auto;
+  }
+  nav li:hover .dropdown { display: flex; }
+  nav .dropdown a { padding: 12px 15px; border-bottom: 1px solid #fce7d2; color: var(--text); display: block; white-space: normal; }
+  .menu-btn { display: block; }
+  .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+  .intro-image { min-height: 280px; box-shadow: none; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .library { grid-template-columns: repeat(2, 1fr); gap: 15px; }
 }
 @media(max-width: 550px) {
-  .cards { grid-template-columns: 1fr; }
-  .hero { min-height: 480px; }
-  .section { padding: 60px 18px; }
-  .heading h2 { font-size: 28px; }
-  .library { grid-template-columns: 1fr; gap: 15px; }
-  .gallery-item img { height: 250px; }
+  .cards { grid-template-columns: 1fr; }
+  .hero { min-height: 480px; }
+  .section { padding: 60px 18px; }
+  .heading h2 { font-size: 28px; }
+  .library { grid-template-columns: 1fr; gap: 15px; }
+  .gallery-item img { height: 250px; }
 }
 </style>
 </head>
 <body>
 
 <header>
- <div class="nav">
-  <a href="#home" class="brand">
-   KHÔNG GIAN VĂN HOÁ CỘNG ĐỒNG H'RÊ
-   <small>Bản sắc - Kết nối - Lan tỏa</small>
-  </a>
-  <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
-  <nav>
-   <ul>
-     <li><a href="#home">TRANG CHỦ</a></li>
-     <li>
-       <a href="#gioithieu">GIỚI THIỆU ▾</a>
-       <div class="dropdown">
-         <a href="#" onclick="toggleLichSu(event)">Lịch sử hình thành</a>
-         <a href="#dancu" onclick="toggleDanCu(event)">Dân cư & Phân bố</a>
-         <a href="#diadiem">Bản đồ không gian</a>
-       </div>
-     </li>
-     <li>
-       <a href="#vanhoa">VĂN HÓA ▾</a>
-       <div class="dropdown">
-         <a href="#trangphuc" onclick="toggleVanHoa(event, 'trangphuc')">Trang phục truyền thống</a>
-         <a href="#amnhac" onclick="toggleVanHoa(event, 'amnhac')">Âm nhạc & Dân ca</a>
-         <a href="#nhasan" onclick="toggleVanHoa(event, 'nhasan')">Kiến trúc nhà sàn</a>
-         <a href="#langnghe" onclick="toggleVanHoa(event, 'langnghe')">Làng nghề thủ công</a>
-       </div>
-     </li>
-     <li>
-       <a href="#lehoi">LỄ HỘI ▾</a>
-       <div class="dropdown">
-         <a href="#" onclick="toggleMungLuaMoi(event)">Lễ hội mừng lúa mới</a>
-         <a href="#damcuoi">Phong tục cưới hỏi</a>
-         <a href="#congchieng">Nghệ thuật cồng chiêng</a>
-       </div>
-     </li>
-     <li>
-       <a href="#amthuc">ẨM THỰC ▾</a>
-       <div class="dropdown">
-         <a href="#" onclick="toggleTrietLy(event)">1. Triết lý ẩm thực</a>
-         <a href="#" onclick="toggleMonAn(event)">2. Các món ăn truyền thống</a>
-         <a href="#" onclick="toggleThucUong(event)">3. Thức uống truyền thống</a>
-       </div>
-     </li>
-     <li><a href="#thuvien">THƯ VIỆN</a></li>
-   </ul>
-  </nav>
- </div>
+ <div class="nav">
+  <a href="#home" class="brand">
+   KHÔNG GIAN VĂN HOÁ CỘNG ĐỒNG H'RÊ
+   <small>Bản sắc - Kết nối - Lan tỏa</small>
+  </a>
+  <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+  <nav>
+   <ul>
+     <li><a href="#home">TRANG CHỦ</a></li>
+     <li>
+       <a href="#gioithieu">GIỚI THIỆU ▾</a>
+       <div class="dropdown">
+         <a href="#" onclick="toggleLichSu(event)">Lịch sử hình thành</a>
+         <a href="#dancu" onclick="toggleDanCu(event)">Dân cư & Phân bố</a>
+         <a href="#diadiem">Bản đồ không gian</a>
+       </div>
+     </li>
+     <li>
+       <a href="#vanhoa">VĂN HÓA ▾</a>
+       <!-- ĐÃ CẬP NHẬT ONCLICK ĐỂ MỞ 4 BÀI VIẾT -->
+       <div class="dropdown">
+         <a href="#trangphuc" onclick="toggleVanHoa(event, 'trangphuc')">Trang phục truyền thống</a>
+         <a href="#amnhac" onclick="toggleVanHoa(event, 'amnhac')">Âm nhạc & Dân ca</a>
+         <a href="#nhasan" onclick="toggleVanHoa(event, 'nhasan')">Kiến trúc nhà sàn</a>
+         <a href="#langnghe" onclick="toggleVanHoa(event, 'langnghe')">Làng nghề thủ công</a>
+       </div>
+     </li>
+     <li>
+       <a href="#lehoi">LỄ HỘI ▾</a>
+       <div class="dropdown">
+         <a href="#" onclick="toggleMungLuaMoi(event)">Lễ hội mừng lúa mới</a>
+         <a href="#damcuoi">Phong tục cưới hỏi</a>
+         <a href="#congchieng">Nghệ thuật cồng chiêng</a>
+       </div>
+     </li>
+     <li>
+       <a href="#amthuc">ẨM THỰC ▾</a>
+       <div class="dropdown">
+         <a href="#" onclick="toggleTrietLy(event)">1. Triết lý ẩm thực</a>
+         <a href="#" onclick="toggleMonAn(event)">2. Các món ăn truyền thống</a>
+         <a href="#" onclick="toggleThucUong(event)">3. Thức uống truyền thống</a>
+       </div>
+     </li>
+     <li><a href="#thuvien">THƯ VIỆN</a></li>
+   </ul>
+  </nav>
+ </div>
 </header>
 
 <section class="hero" id="home">
- <div class="hero-content">
-  <div class="eyebrow">DI SẢN VĂN HÓA - GIÁ TRỊ CỘNG ĐỒNG</div>
-  <h1>Lạc giữa biển mây, nghe đại ngàn kể chuyện</h1>
-  <p>Nơi bảo tồn ngọn lửa văn hóa, những nếp nhà sàn truyền thống và lan tỏa hơi ấm bản sắc của đồng bào H'rê.</p>
-  <a class="btn" href="#gioithieu">BƯỚC VÀO KHÔNG GIAN →</a>
- </div>
+ <div class="hero-content">
+  <div class="eyebrow">DI SẢN VĂN HÓA - GIÁ TRỊ CỘNG ĐỒNG</div>
+  <h1>Lạc giữa biển mây, nghe đại ngàn kể chuyện</h1>
+  <p>Nơi bảo tồn ngọn lửa văn hóa, những nếp nhà sàn truyền thống và lan tỏa hơi ấm bản sắc của đồng bào H'rê.</p>
+  <a class="btn" href="#gioithieu">BƯỚC VÀO KHÔNG GIAN →</a>
+ </div>
 </section>
 
 <section class="section" id="gioithieu">
- <div class="intro-grid">
-  <div class="intro-image"></div>
-  <div class="intro-text">
-   <span class="eyebrow">GIỚI THIỆU</span>
-   <h3>Bản sắc thấm đượm màu đất và ánh lửa</h3>
-   <p>Đồng bào H'rê bao đời nay gắn bó mật thiết với rẫy nương, rừng núi. Làng bản của họ mang vẻ đẹp mộc mạc nhưng ẩn chứa một kho tàng văn hóa vô cùng đặc sắc được hun đúc qua nhiều thế hệ.</p>
-   <p>Không gian văn hóa này như một đốm than hồng, được thắp lên nhằm lưu giữ từng lời ca, điệu múa, nếp nhà và phong tục tập quán mộc mạc của cộng đồng H'rê.</p>
-   <p>Đây là nơi kết nối cộng đồng, truyền lửa cho thế hệ trẻ trân trọng và tiếp nối di sản văn hóa của cha ông giữa dòng chảy hiện đại.</p>
-  </div>
- </div>
+ <div class="intro-grid">
+  <div class="intro-image"></div>
+  <div class="intro-text">
+   <span class="eyebrow">GIỚI THIỆU</span>
+   <h3>Bản sắc thấm đượm màu đất và ánh lửa</h3>
+   <p>Đồng bào H'rê bao đời nay gắn bó mật thiết với rẫy nương, rừng núi. Làng bản của họ mang vẻ đẹp mộc mạc nhưng ẩn chứa một kho tàng văn hóa vô cùng đặc sắc được hun đúc qua nhiều thế hệ.</p>
+   <p>Không gian văn hóa này như một đốm than hồng, được thắp lên nhằm lưu giữ từng lời ca, điệu múa, nếp nhà và phong tục tập quán mộc mạc của cộng đồng H'rê.</p>
+   <p>Đây là nơi kết nối cộng đồng, truyền lửa cho thế hệ trẻ trân trọng và tiếp nối di sản văn hóa của cha ông giữa dòng chảy hiện đại.</p>
+  </div>
+ </div>
 </section>
 
 <section class="section" id="lichsu" style="padding-top: 0;">
- <div class="heading">
-  <span>NGUỒN CỘI ĐẠI NGÀN</span>
-  <h2>LỊCH SỬ HÌNH THÀNH</h2>
-  <p>Dấu chân khai mở đất đai và ngọn lửa văn hóa lưu truyền qua ngàn thế hệ.</p>
- </div>
- <div class="intro-grid" style="grid-template-columns: 1fr 1.1fr;"> 
-  <div class="intro-text">
-   <h3>Dấu chân từ thuở hồng hoang</h3>
-   <p>Người H'rê (còn gọi là người Chăm Rê, Chom, Thượng Ba Tơ...) là một trong những cư dân bản địa sinh sống lâu đời bậc nhất tại dải đất miền Trung, thuộc nhóm ngôn ngữ Môn - Khmer.</p>
-   <p>Khác với nhiều dân tộc anh em ven dãy Trường Sơn chủ yếu làm nương rẫy, người H'rê từ rất sớm đã chinh phục thiên nhiên, khai khẩn các thung lũng hẹp để lập nên những thửa <strong>ruộng bậc thang</strong> tuyệt đẹp.</p>
-   <p>Trải qua bao thăng trầm, ngọn lửa trong gian bếp nhà sàn của người H'rê chưa bao giờ tắt. Ngọn lửa ấy vẫn ngày đêm sưởi ấm và trao truyền một kho tàng di sản đồ sộ.</p>
-  </div>
-  <!-- Sử dụng ảnh mới image_548022.jpg để đồng bộ thiết kế -->
-  <div class="intro-image" style="background: url('image_548022.jpg') center/cover no-repeat; box-shadow: 15px 15px 0px #fed7aa;"></div>
- </div>
+ <div class="heading">
+  <span>NGUỒN CỘI ĐẠI NGÀN</span>
+  <h2>LỊCH SỬ HÌNH THÀNH</h2>
+  <p>Dấu chân khai mở đất đai và ngọn lửa văn hóa lưu truyền qua ngàn thế hệ.</p>
+ </div>
+ <div class="intro-grid" style="grid-template-columns: 1fr 1.1fr;"> 
+  <div class="intro-text">
+   <h3>Dấu chân từ thuở hồng hoang</h3>
+   <p>Người H'rê (còn gọi là người Chăm Rê, Chom, Thượng Ba Tơ...) là một trong những cư dân bản địa sinh sống lâu đời bậc nhất tại dải đất miền Trung, thuộc nhóm ngôn ngữ Môn - Khmer.</p>
+   <p>Khác với nhiều dân tộc anh em ven dãy Trường Sơn chủ yếu làm nương rẫy, người H'rê từ rất sớm đã chinh phục thiên nhiên, khai khẩn các thung lũng hẹp để lập nên những thửa <strong>ruộng bậc thang</strong> tuyệt đẹp.</p>
+   <p>Trải qua bao thăng trầm, ngọn lửa trong gian bếp nhà sàn của người H'rê chưa bao giờ tắt. Ngọn lửa ấy vẫn ngày đêm sưởi ấm và trao truyền một kho tàng di sản đồ sộ.</p>
+  </div>
+  <div class="intro-image" style="background: url('thaonguyen.jpg') center/cover no-repeat; box-shadow: 15px 15px 0px #fed7aa;">
+ </div>
 </section>
 
 <section class="section bg-warm" id="vanhoa">
- <div class="heading">
-  <span>KHÁM PHÁ BẢN SẮC</span>
-  <h2>NHỮNG GIÁ TRỊ VĂN HÓA H'RÊ</h2>
-  <p>Mỗi nét văn hóa là một câu chuyện, một ký ức đượm mùi khói bếp và một niềm tự hào của cộng đồng.</p>
- </div>
- <div class="cards">
-  <article class="card">
-   <img src="naubanhtet.jpg" alt="Sinh hoạt văn hóa cộng đồng" onerror="this.src='https://images.unsplash.com/photo-1596422846543-74c6ca27bb13?auto=format&fit=crop&w=800&q=80'">
-   <div class="card-body">
-     <h3>Trang phục thổ cẩm</h3>
-     <p>Sự giao hòa giữa màu đen của đất, màu đỏ của lửa dệt nên hoa văn truyền thống tinh xảo của đồng bào H'rê.</p>
-     <img src="trang-phuc.jfif" alt="Trang phục H'rê" style="border-radius: 8px; margin-top: 15px; border:none; height: 120px;" onerror="this.style.display='none'">
-     <a href="#trangphuc" class="btn-link" onclick="toggleVanHoa(event, 'trangphuc')">TÌM HIỂU THÊM →</a>
-   </div>
-  </article>
+ <div class="heading">
+  <span>KHÁM PHÁ BẢN SẮC</span>
+  <h2>NHỮNG GIÁ TRỊ VĂN HÓA H'RÊ</h2>
+  <p>Mỗi nét văn hóa là một câu chuyện, một ký ức đượm mùi khói bếp và một niềm tự hào của cộng đồng.</p>
+ </div>
+ <div class="cards">
+  <!-- CẬP NHẬT CÁC NÚT "TÌM HIỂU THÊM" -->
+  <article class="card">
+   <img src="naubanhtet.jpg" alt="Sinh hoạt văn hóa cộng đồng" onerror="this.src='https://images.unsplash.com/photo-1596422846543-74c6ca27bb13?auto=format&fit=crop&w=800&q=80'">
+   <div class="card-body">
+     <h3>Trang phục thổ cẩm</h3>
+     <p>Sự giao hòa giữa màu đen của đất, màu đỏ của lửa dệt nên hoa văn truyền thống tinh xảo của đồng bào H'rê.</p>
+     <img src="trang-phuc.jfif" alt="Trang phục H'rê" style="border-radius: 8px; margin-top: 15px; border:none; height: 120px;" onerror="this.style.display='none'">
+     <a href="#trangphuc" class="btn-link" onclick="toggleVanHoa(event, 'trangphuc')">TÌM HIỂU THÊM →</a>
+   </div>
+  </article>
 
-  <article class="card">
-   <img src="vannghehre.jpg" alt="Âm nhạc truyền thống">
-   <div class="card-body">
-     <h3>Âm vang đại ngàn</h3>
-     <p>Lắng đọng cùng tiếng chiêng, đàn Ka-lắc và làn điệu Ta-lêu, Ca-choi bên bếp lửa nhà sàn.</p>
-     <div class="audio-player" style="margin-top: 15px;">
-       <p style="font-size: 13px; font-weight: 700; margin-bottom: 8px; color: var(--wood);">Giai điệu H'rê:</p>
-       <audio controls style="width: 100%;">
-         <source src="batoqueem.mp3" type="audio/mpeg">
-         Trình duyệt không hỗ trợ thẻ audio.
-       </audio>
-     </div>
-     <a href="#amnhac" class="btn-link" onclick="toggleVanHoa(event, 'amnhac')">TÌM HIỂU THÊM →</a>
-   </div>
-  </article>
-   <article class="card">
-   <img src="nha san va ruong hre.jpg" alt="Làng quê" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80'">
-   <div class="card-body">
-     <h3>Nếp nhà và Làng bản</h3>
-     <p>Những mái nhà sàn nép mình bên sườn đồi, khói lam chiều vấn vương hòa cùng nhịp sống mộc mạc.</p>
-     <a href="#nhasan" class="btn-link" onclick="toggleVanHoa(event, 'nhasan')">TÌM HIỂU THÊM →</a>
-   </div>
-  </article>
+  <article class="card">
+   <img src="vannghehre.jpg" alt="Âm nhạc truyền thống">
+   <div class="card-body">
+     <h3>Âm vang đại ngàn</h3>
+     <p>Lắng đọng cùng tiếng chiêng, đàn Ka-lắc và làn điệu Ta-lêu, Ca-choi bên bếp lửa nhà sàn.</p>
+     <div class="audio-player" style="margin-top: 15px;">
+       <p style="font-size: 13px; font-weight: 700; margin-bottom: 8px; color: var(--wood);">Giai điệu H'rê:</p>
+       <audio controls style="width: 100%;">
+         <source src="batoqueem.mp3" type="audio/mpeg">
+         Trình duyệt không hỗ trợ thẻ audio.
+       </audio>
+     </div>
+     <a href="#amnhac" class="btn-link" onclick="toggleVanHoa(event, 'amnhac')">TÌM HIỂU THÊM →</a>
+   </div>
+  </article>
+   <article class="card">
+   <img src="nha san va ruong hre.jpg" alt="Làng quê" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80'">
+   <div class="card-body">
+     <h3>Nếp nhà và Làng bản</h3>
+     <p>Những mái nhà sàn nép mình bên sườn đồi, khói lam chiều vấn vương hòa cùng nhịp sống mộc mạc.</p>
+     <a href="#nhasan" class="btn-link" onclick="toggleVanHoa(event, 'nhasan')">TÌM HIỂU THÊM →</a>
+   </div>
+  </article>
 
-  <article class="card" id="amthuc">
-   <img src="hapca.jpg" alt="Ẩm thực">
-   <div class="card-body">
-     <h3>Ẩm thực dân dã</h3>
-     <p>Hương vị núi rừng qua ché rượu cần nồng ấm, thịt gác bếp, măng le và cơm lam nướng ống tre.</p>
-     <a href="#thuvien" class="btn-link">TÌM HIỂU THÊM →</a>
-   </div>
-  </article>
+  <article class="card" id="amthuc">
+   <img src="hapca.jpg" alt="Ẩm thực">
+   <div class="card-body">
+     <h3>Ẩm thực dân dã</h3>
+     <p>Hương vị núi rừng qua ché rượu cần nồng ấm, thịt gác bếp, măng le và cơm lam nướng ống tre.</p>
+     <a href="#thuvien" class="btn-link">TÌM HIỂU THÊM →</a>
+   </div>
+  </article>
 
-  <article class="card">
-   <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80" alt="Nghề thủ công">
-   <div class="card-body">
-     <h3>Bàn tay tài hoa</h3>
-     <p>Nghề dệt thổ cẩm, đan lát mây tre truyền thống được các nghệ nhân gửi gắm linh hồn của đại ngàn.</p>
-     <a href="#langnghe" class="btn-link" onclick="toggleVanHoa(event, 'langnghe')">TÌM HIỂU THÊM →</a>
-   </div>
-  </article>
- </div>
+  <article class="card">
+   <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80" alt="Nghề thủ công">
+   <div class="card-body">
+     <h3>Bàn tay tài hoa</h3>
+     <p>Nghề dệt thổ cẩm, đan lát mây tre truyền thống được các nghệ nhân gửi gắm linh hồn của đại ngàn.</p>
+     <a href="#langnghe" class="btn-link" onclick="toggleVanHoa(event, 'langnghe')">TÌM HIỂU THÊM →</a>
+   </div>
+  </article>
+ </div>
 </section>
-
 <!-- ===================================================== -->
-<!-- 04 BÀI VIẾT CHI TIẾT MỤC VĂN HÓA -->
+<!-- 04 BÀI VIẾT CHI TIẾT MỤC VĂN HÓA - ĐÃ ÁP DỤNG CSS MỚI -->
 <!-- ===================================================== -->
 <section class="section vanho-article" id="trangphuc">
-  <div class="heading"><span>SẮC MÀU VĂN HÓA</span><h2>TRANG PHỤC TRUYỀN THỐNG</h2><p>Sắc màu thổ cẩm – Nét đẹp trang phục truyền thống của người Hrê</p></div>
-  <div class="article-shell">
-    <img class="article-cover" src="trangphuchre.jpg" alt="Trang phục truyền thống người Hrê" onerror="this.onerror=null;this.src='trang-phuc.jfif';">
-    <p>Trang phục truyền thống là một trong những nét văn hóa đặc sắc, góp phần tạo nên bản sắc riêng của cộng đồng người Hrê ở vùng núi phía Tây tỉnh Quảng Ngãi. Qua từng tấm vải, đường dệt và hoa văn trang trí, người Hrê gửi gắm tình yêu thiên nhiên, quan niệm thẩm mỹ và những giá trị văn hóa được gìn giữ qua nhiều thế hệ.</p>
-    <h3>Vẻ đẹp mộc mạc trong trang phục truyền thống</h3>
-    <p>Trong trang phục truyền thống của người Hrê, phụ nữ thường mặc váy ống, kết hợp với áo, yếm và khăn đội đầu. Đàn ông trước đây thường mặc khố, chít khăn và sử dụng tấm choàng thổ cẩm trong một số dịp. Trang phục được dệt thủ công, có kiểu dáng giản dị nhưng mang nét riêng trong cách phối màu và trang trí hoa văn.</p>
-    <p>Điểm dễ nhận thấy ở thổ cẩm Hrê là sự kết hợp giữa hai màu chủ đạo đen và đỏ, bên cạnh những đường nét màu trắng tạo điểm nhấn. Các màu sắc và cách phối hợp hoa văn tạo nên vẻ đẹp riêng, gắn với quan niệm truyền thống và đời sống của cộng đồng.</p>
-    <h3>Hoa văn kể chuyện về cuộc sống</h3>
-    <p>Hoa văn trên trang phục Hrê không đơn thuần là những họa tiết trang trí. Qua bàn tay khéo léo của người phụ nữ, hình ảnh thiên nhiên, sông suối, con vật và các vật dụng quen thuộc trong đời sống được thể hiện bằng những đường nét cách điệu.</p>
-    <p>Các họa tiết hình học, đường dích dắc, đường thẳng song song và những hình ảnh gợi liên tưởng đến thiên nhiên tạo nên vẻ đẹp hài hòa cho tấm vải. Hoa văn được tạo trực tiếp trong quá trình dệt bằng kỹ thuật cài sợi, đòi hỏi sự tỉ mỉ và kinh nghiệm của người thợ.</p>
-    <h3>Gìn giữ nét đẹp qua các thế hệ</h3>
-    <p>Ngày nay, trang phục thường ngày của người Hrê đã có nhiều thay đổi theo nhịp sống hiện đại. Tuy nhiên, trang phục truyền thống vẫn được sử dụng trong các dịp lễ hội, sinh hoạt văn hóa, biểu diễn nghệ thuật và những sự kiện quan trọng của cộng đồng.</p>
-    <p>Việc gìn giữ trang phục truyền thống không chỉ là bảo tồn một sản phẩm thủ công mà còn là cách lưu giữ ký ức văn hóa của dân tộc. Mỗi bộ trang phục Hrê là một câu chuyện về đôi bàn tay lao động, sự sáng tạo và niềm tự hào về cội nguồn.</p>
-    <div style="text-align:center"><button class="article-close" onclick="toggleVanHoa(event, 'trangphuc')">Đóng bài viết</button></div>
-  </div>
+  <div class="heading"><span>SẮC MÀU VĂN HÓA</span><h2>TRANG PHỤC TRUYỀN THỐNG</h2><p>Sắc màu thổ cẩm – Nét đẹp trang phục truyền thống của người Hrê</p></div>
+  <div class="article-shell">
+    <img class="article-cover" src="trangphuchre.jpg" alt="Trang phục truyền thống người Hrê" onerror="this.onerror=null;this.src='trang-phuc.jfif';">
+    <p>Trang phục truyền thống là một trong những nét văn hóa đặc sắc, góp phần tạo nên bản sắc riêng của cộng đồng người Hrê ở vùng núi phía Tây tỉnh Quảng Ngãi. Qua từng tấm vải, đường dệt và hoa văn trang trí, người Hrê gửi gắm tình yêu thiên nhiên, quan niệm thẩm mỹ và những giá trị văn hóa được gìn giữ qua nhiều thế hệ.</p>
+    <h3>Vẻ đẹp mộc mạc trong trang phục truyền thống</h3>
+    <p>Trong trang phục truyền thống của người Hrê, phụ nữ thường mặc váy ống, kết hợp với áo, yếm và khăn đội đầu. Đàn ông trước đây thường mặc khố, chít khăn và sử dụng tấm choàng thổ cẩm trong một số dịp. Trang phục được dệt thủ công, có kiểu dáng giản dị nhưng mang nét riêng trong cách phối màu và trang trí hoa văn.</p>
+    <p>Điểm dễ nhận thấy ở thổ cẩm Hrê là sự kết hợp giữa hai màu chủ đạo đen và đỏ, bên cạnh những đường nét màu trắng tạo điểm nhấn. Các màu sắc và cách phối hợp hoa văn tạo nên vẻ đẹp riêng, gắn với quan niệm truyền thống và đời sống của cộng đồng.</p>
+    <h3>Hoa văn kể chuyện về cuộc sống</h3>
+    <p>Hoa văn trên trang phục Hrê không đơn thuần là những họa tiết trang trí. Qua bàn tay khéo léo của người phụ nữ, hình ảnh thiên nhiên, sông suối, con vật và các vật dụng quen thuộc trong đời sống được thể hiện bằng những đường nét cách điệu.</p>
+    <p>Các họa tiết hình học, đường dích dắc, đường thẳng song song và những hình ảnh gợi liên tưởng đến thiên nhiên tạo nên vẻ đẹp hài hòa cho tấm vải. Hoa văn được tạo trực tiếp trong quá trình dệt bằng kỹ thuật cài sợi, đòi hỏi sự tỉ mỉ và kinh nghiệm của người thợ.</p>
+    <h3>Gìn giữ nét đẹp qua các thế hệ</h3>
+    <p>Ngày nay, trang phục thường ngày của người Hrê đã có nhiều thay đổi theo nhịp sống hiện đại. Tuy nhiên, trang phục truyền thống vẫn được sử dụng trong các dịp lễ hội, sinh hoạt văn hóa, biểu diễn nghệ thuật và những sự kiện quan trọng của cộng đồng.</p>
+    <p>Việc gìn giữ trang phục truyền thống không chỉ là bảo tồn một sản phẩm thủ công mà còn là cách lưu giữ ký ức văn hóa của dân tộc. Mỗi bộ trang phục Hrê là một câu chuyện về đôi bàn tay lao động, sự sáng tạo và niềm tự hào về cội nguồn.</p>
+    <div style="text-align:center"><button class="article-close" onclick="toggleVanHoa(event, 'trangphuc')">Đóng bài viết</button></div>
+  </div>
 </section>
 
 <section class="section vanho-article" id="amnhac">
-  <div class="heading"><span>TIẾNG HÁT ĐẠI NGÀN</span><h2>ÂM NHẠC &amp; DÂN CA</h2><p>Ta lêu, Ca chôi – Tiếng lòng của người Hrê giữa đại ngàn</p></div>
-  <div class="article-shell">
-    <img class="article-cover" src="vannghehre.jpg" alt="Đội văn nghệ biểu diễn dân ca Hrê" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=85';">
-    <p>Giữa không gian núi rừng miền Tây Quảng Ngãi, âm nhạc dân gian Hrê mang vẻ đẹp mộc mạc, sâu lắng và giàu cảm xúc. Những làn điệu dân ca, tiếng chiêng cùng âm thanh của các nhạc cụ truyền thống đã trở thành một phần không thể thiếu trong đời sống tinh thần của cộng đồng.</p>
-    <h3>Ta lêu – Lời kể bằng âm nhạc</h3>
-    <p>Ta lêu là một làn điệu dân ca tiêu biểu của người Hrê. Đây là hình thức hát kể, thường có bài bản nhất định, được sử dụng để thể hiện những câu chuyện, tâm tư và những điều gần gũi trong cuộc sống.</p>
-    <p>Thông qua Ta lêu, người hát có thể kể về quê hương, gia đình, lao động sản xuất, tình yêu cuộc sống và những câu chuyện được lưu truyền trong cộng đồng. Giai điệu mộc mạc nhưng giàu sức biểu cảm, mang đậm hơi thở của núi rừng và cuộc sống thường ngày.</p>
-    <h3>Ca chôi – Những lời ca đối đáp giao duyên</h3>
-    <p>Nếu Ta lêu thiên về kể chuyện thì Ca chôi nổi bật với hình thức hát đối đáp, giao duyên và tâm tình. Người hát có thể đối đáp giữa nam và nữ, giữa những người cùng giới, ứng tác lời ca ngay trong lúc diễn xướng.</p>
-    <p>Nội dung Ca chôi phong phú, có thể nói về tình yêu đôi lứa, chuyện gia đình, cuộc sống cộng đồng, quê hương và đất nước. Sự linh hoạt trong lời hát tạo nên nét hấp dẫn riêng, thể hiện khả năng ứng đối và sự tinh tế của người Hrê.</p>
-    <h3>Âm thanh nhạc cụ và không gian diễn xướng</h3>
-    <p>Những làn điệu dân ca có thể được thể hiện cùng tiếng chiêng và các nhạc cụ truyền thống. Âm điệu mộc mạc hòa quyện tạo nên không gian văn hóa đặc trưng, vang lên trong dịp lễ hội, cưới hỏi, khi lao động hoặc lúc mọi người quây quần bên bếp lửa.</p>
-    <p>Âm nhạc vì thế không chỉ dành riêng cho sân khấu mà hiện diện trong chính đời sống của người dân, góp phần kết nối các thành viên và trao truyền những câu chuyện của cộng đồng.</p>
-    <h3>Trao truyền di sản cho thế hệ trẻ</h3>
-    <p>Hát Ta lêu và Ca chôi là những giá trị văn hóa cần được tiếp tục gìn giữ, trao truyền. Việc nghệ nhân hướng dẫn thế hệ trẻ học hát, tìm hiểu ý nghĩa lời ca và tham gia biểu diễn góp phần duy trì sức sống của dân ca trong đời sống hiện đại.</p>
-    <p>Mỗi lời hát Ta lêu, mỗi câu Ca chôi không chỉ là âm thanh của núi rừng mà còn là tiếng lòng, là ký ức và niềm tự hào của cộng đồng người Hrê.</p>
-    <div style="text-align:center"><button class="article-close" onclick="toggleVanHoa(event, 'amnhac')">Đóng bài viết</button></div>
-  </div>
+  <div class="heading"><span>TIẾNG HÁT ĐẠI NGÀN</span><h2>ÂM NHẠC &amp; DÂN CA</h2><p>Ta lêu, Ca chôi – Tiếng lòng của người Hrê giữa đại ngàn</p></div>
+  <div class="article-shell">
+    <img class="article-cover" src="vannghehre.jpg" alt="Đội văn nghệ biểu diễn dân ca Hrê" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=85';">
+    <p>Giữa không gian núi rừng miền Tây Quảng Ngãi, âm nhạc dân gian Hrê mang vẻ đẹp mộc mạc, sâu lắng và giàu cảm xúc. Những làn điệu dân ca, tiếng chiêng cùng âm thanh của các nhạc cụ truyền thống đã trở thành một phần không thể thiếu trong đời sống tinh thần của cộng đồng.</p>
+    <h3>Ta lêu – Lời kể bằng âm nhạc</h3>
+    <p>Ta lêu là một làn điệu dân ca tiêu biểu của người Hrê. Đây là hình thức hát kể, thường có bài bản nhất định, được sử dụng để thể hiện những câu chuyện, tâm tư và những điều gần gũi trong cuộc sống.</p>
+    <p>Thông qua Ta lêu, người hát có thể kể về quê hương, gia đình, lao động sản xuất, tình yêu cuộc sống và những câu chuyện được lưu truyền trong cộng đồng. Giai điệu mộc mạc nhưng giàu sức biểu cảm, mang đậm hơi thở của núi rừng và cuộc sống thường ngày.</p>
+    <h3>Ca chôi – Những lời ca đối đáp giao duyên</h3>
+    <p>Nếu Ta lêu thiên về kể chuyện thì Ca chôi nổi bật với hình thức hát đối đáp, giao duyên và tâm tình. Người hát có thể đối đáp giữa nam và nữ, giữa những người cùng giới, ứng tác lời ca ngay trong lúc diễn xướng.</p>
+    <p>Nội dung Ca chôi phong phú, có thể nói về tình yêu đôi lứa, chuyện gia đình, cuộc sống cộng đồng, quê hương và đất nước. Sự linh hoạt trong lời hát tạo nên nét hấp dẫn riêng, thể hiện khả năng ứng đối và sự tinh tế của người Hrê.</p>
+    <h3>Âm thanh nhạc cụ và không gian diễn xướng</h3>
+    <p>Những làn điệu dân ca có thể được thể hiện cùng tiếng chiêng và các nhạc cụ truyền thống. Âm điệu mộc mạc hòa quyện tạo nên không gian văn hóa đặc trưng, vang lên trong dịp lễ hội, cưới hỏi, khi lao động hoặc lúc mọi người quây quần bên bếp lửa.</p>
+    <p>Âm nhạc vì thế không chỉ dành riêng cho sân khấu mà hiện diện trong chính đời sống của người dân, góp phần kết nối các thành viên và trao truyền những câu chuyện của cộng đồng.</p>
+    <h3>Trao truyền di sản cho thế hệ trẻ</h3>
+    <p>Hát Ta lêu và Ca chôi là những giá trị văn hóa cần được tiếp tục gìn giữ, trao truyền. Việc nghệ nhân hướng dẫn thế hệ trẻ học hát, tìm hiểu ý nghĩa lời ca và tham gia biểu diễn góp phần duy trì sức sống của dân ca trong đời sống hiện đại.</p>
+    <p>Mỗi lời hát Ta lêu, mỗi câu Ca chôi không chỉ là âm thanh của núi rừng mà còn là tiếng lòng, là ký ức và niềm tự hào của cộng đồng người Hrê.</p>
+    <div style="text-align:center"><button class="article-close" onclick="toggleVanHoa(event, 'amnhac')">Đóng bài viết</button></div>
+  </div>
 </section>
 
 <section class="section vanho-article" id="nhasan">
-  <div class="heading"><span>KHÔNG GIAN SỐNG TRUYỀN THỐNG</span><h2>KIẾN TRÚC NHÀ SÀN</h2><p>Nhà sàn Hrê – Không gian lưu giữ nếp sống cộng đồng</p></div>
-  <div class="article-shell">
-    <img class="article-cover" src="nha san va ruong hre.jpg" alt="Nhà sàn và ruộng của người Hrê" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=85';">
-    <p>Trải qua nhiều thế hệ sinh sống giữa núi rừng Trường Sơn, người Hrê đã hình thành những nét kiến trúc nhà ở mang đậm dấu ấn văn hóa bản địa. Trong đó, nhà sàn truyền thống không chỉ là nơi che mưa nắng mà còn là không gian sinh hoạt gia đình, nơi gìn giữ phong tục, tập quán và những giá trị tinh thần của cộng đồng.</p>
-    <h3>Kiến trúc gần gũi với thiên nhiên</h3>
-    <p>Nhà sàn truyền thống của người Hrê thường được dựng trên những triền đất, chân gò hoặc khu vực gần ruộng đồng, nguồn nước. Vật liệu xây dựng chủ yếu lấy từ tự nhiên như gỗ, tre, nứa, lồ ô, tranh và dây mây.</p>
-    <p>Nhà thường có hai hàng cột song song tạo thành hai vì cột. Không gian bên trong được bố trí thành các khu vực sinh hoạt, nghỉ ngơi và tiếp khách. Cách dựng nhà thể hiện sự thích nghi với điều kiện địa hình và môi trường sinh sống của người Hrê.</p>
-    <h3>Biểu tượng sừng trâu trên mái nhà</h3>
-    <p>Một đặc điểm dễ nhận biết ở một số nhà sàn truyền thống Hrê là hình tượng sừng trâu được tạo ở hai đầu nóc nhà bằng vật liệu phù hợp. Trong đời sống truyền thống, trâu có vai trò quan trọng đối với hoạt động sản xuất nông nghiệp và đời sống tâm linh của người Hrê. Hình tượng này gắn với quan niệm tín ngưỡng dân gian, thể hiện mối quan hệ giữa con người, vật nuôi và thế giới tự nhiên.</p>
-    <h3>Bếp lửa – Trái tim của ngôi nhà</h3>
-    <p>Trong ngôi nhà sàn truyền thống, bếp lửa giữ vị trí quan trọng. Đây là nơi nấu nướng, sưởi ấm và cũng là không gian để các thành viên trong gia đình quây quần sau một ngày lao động.</p>
-    <p>Bên bếp lửa, người lớn kể chuyện xưa, truyền dạy kinh nghiệm sống, phong tục và những bài dân ca cho con cháu. Những câu chuyện, tiếng hát và sinh hoạt gia đình góp phần làm cho ngôi nhà sàn trở thành nơi lưu giữ ký ức văn hóa qua nhiều thế hệ.</p>
-    <h3>Nhà sàn – Không gian văn hóa của cộng đồng</h3>
-    <p>Nhà sàn không chỉ gắn với đời sống riêng của mỗi gia đình mà còn có mối liên hệ mật thiết với sinh hoạt chung của làng. Đây là không gian diễn ra những cuộc gặp gỡ, tiếp khách, kể chuyện dân gian, hát Ta lêu, Ca chôi và nhiều hoạt động văn hóa truyền thống khác.</p>
-    <p>Ngày nay, cùng với sự phát triển của đời sống, nhiều ngôi nhà đã được cải tiến để phù hợp hơn với nhu cầu sinh hoạt. Việc bảo tồn những ngôi nhà sàn truyền thống vẫn có ý nghĩa quan trọng trong gìn giữ kiến trúc bản địa và bản sắc văn hóa Hrê.</p>
-    <div style="text-align:center"><button class="article-close" onclick="toggleVanHoa(event, 'nhasan')">Đóng bài viết</button></div>
-  </div>
+  <div class="heading"><span>KHÔNG GIAN SỐNG TRUYỀN THỐNG</span><h2>KIẾN TRÚC NHÀ SÀN</h2><p>Nhà sàn Hrê – Không gian lưu giữ nếp sống cộng đồng</p></div>
+  <div class="article-shell">
+    <img class="article-cover" src="nha san va ruong hre.jpg" alt="Nhà sàn và ruộng của người Hrê" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=85';">
+    <p>Trải qua nhiều thế hệ sinh sống giữa núi rừng Trường Sơn, người Hrê đã hình thành những nét kiến trúc nhà ở mang đậm dấu ấn văn hóa bản địa. Trong đó, nhà sàn truyền thống không chỉ là nơi che mưa nắng mà còn là không gian sinh hoạt gia đình, nơi gìn giữ phong tục, tập quán và những giá trị tinh thần của cộng đồng.</p>
+    <h3>Kiến trúc gần gũi với thiên nhiên</h3>
+    <p>Nhà sàn truyền thống của người Hrê thường được dựng trên những triền đất, chân gò hoặc khu vực gần ruộng đồng, nguồn nước. Vật liệu xây dựng chủ yếu lấy từ tự nhiên như gỗ, tre, nứa, lồ ô, tranh và dây mây.</p>
+    <p>Nhà thường có hai hàng cột song song tạo thành hai vì cột. Không gian bên trong được bố trí thành các khu vực sinh hoạt, nghỉ ngơi và tiếp khách. Cách dựng nhà thể hiện sự thích nghi với điều kiện địa hình và môi trường sinh sống của người Hrê.</p>
+    <h3>Biểu tượng sừng trâu trên mái nhà</h3>
+    <p>Một đặc điểm dễ nhận biết ở một số nhà sàn truyền thống Hrê là hình tượng sừng trâu được tạo ở hai đầu nóc nhà bằng vật liệu phù hợp. Trong đời sống truyền thống, trâu có vai trò quan trọng đối với hoạt động sản xuất nông nghiệp và đời sống tâm linh của người Hrê. Hình tượng này gắn với quan niệm tín ngưỡng dân gian, thể hiện mối quan hệ giữa con người, vật nuôi và thế giới tự nhiên.</p>
+    <h3>Bếp lửa – Trái tim của ngôi nhà</h3>
+    <p>Trong ngôi nhà sàn truyền thống, bếp lửa giữ vị trí quan trọng. Đây là nơi nấu nướng, sưởi ấm và cũng là không gian để các thành viên trong gia đình quây quần sau một ngày lao động.</p>
+    <p>Bên bếp lửa, người lớn kể chuyện xưa, truyền dạy kinh nghiệm sống, phong tục và những bài dân ca cho con cháu. Những câu chuyện, tiếng hát và sinh hoạt gia đình góp phần làm cho ngôi nhà sàn trở thành nơi lưu giữ ký ức văn hóa qua nhiều thế hệ.</p>
+    <h3>Nhà sàn – Không gian văn hóa của cộng đồng</h3>
+    <p>Nhà sàn không chỉ gắn với đời sống riêng của mỗi gia đình mà còn có mối liên hệ mật thiết với sinh hoạt chung của làng. Đây là không gian diễn ra những cuộc gặp gỡ, tiếp khách, kể chuyện dân gian, hát Ta lêu, Ca chôi và nhiều hoạt động văn hóa truyền thống khác.</p>
+    <p>Ngày nay, cùng với sự phát triển của đời sống, nhiều ngôi nhà đã được cải tiến để phù hợp hơn với nhu cầu sinh hoạt. Việc bảo tồn những ngôi nhà sàn truyền thống vẫn có ý nghĩa quan trọng trong gìn giữ kiến trúc bản địa và bản sắc văn hóa Hrê.</p>
+    <div style="text-align:center"><button class="article-close" onclick="toggleVanHoa(event, 'nhasan')">Đóng bài viết</button></div>
+  </div>
 </section>
 
 <section class="section vanho-article" id="langnghe">
-  <div class="heading"><span>TINH HOA BÀN TAY NGHỆ NHÂN</span><h2>LÀNG NGHỀ THỦ CÔNG</h2><p>Làng nghề thủ công Hrê – Tinh hoa từ đôi bàn tay người bản địa</p></div>
-  <div class="article-shell">
-    <img class="article-cover" src="trang-phuc.jfif" alt="Sản phẩm thổ cẩm truyền thống Hrê" onerror="this.onerror=null;this.src='trangphuchre.jpg';">
-    <p>Từ những nguyên liệu gần gũi với núi rừng, cộng đồng người Hrê đã sáng tạo nên nhiều sản phẩm thủ công phục vụ đời sống. Trong đó, nghề dệt thổ cẩm là một nét văn hóa tiêu biểu, thể hiện sự khéo léo, óc sáng tạo và khả năng lưu giữ tri thức truyền thống của người dân.</p>
-    <h3>Nghề dệt thổ cẩm – Di sản của sự khéo léo</h3>
-    <p>Nhắc đến nghề thủ công truyền thống của người Hrê ở Quảng Ngãi, không thể không nhắc đến nghề dệt thổ cẩm tại Làng Teng, xã Ba Thành, khu vực Ba Tơ. Nghề dệt được lưu truyền qua nhiều thế hệ, gắn bó mật thiết với đời sống của người phụ nữ Hrê.</p>
-    <p>Từ những sợi bông, người thợ thực hiện các công đoạn chuẩn bị sợi, tạo màu, mắc sợi lên khung và dệt thành sản phẩm hoàn chỉnh. Nghề dệt thổ cẩm truyền thống của người Hrê ở xã Ba Thành đã được ghi danh là Di sản văn hóa phi vật thể quốc gia năm 2019.</p>
-    <h3>Kỹ thuật dệt và những hoa văn độc đáo</h3>
-    <p>Điểm đặc sắc của thổ cẩm Hrê nằm ở kỹ thuật tạo hoa văn ngay trong quá trình dệt. Người thợ phải tính toán, sắp xếp từng sợi chỉ để tạo nên các họa tiết theo ý muốn.</p>
-    <p>Màu đen và đỏ thường được sử dụng làm màu chủ đạo, kết hợp với màu trắng cùng những đường nét hình học và hình ảnh cách điệu từ thiên nhiên. Mỗi tấm vải là kết quả của sự kiên trì, tỉ mỉ và kinh nghiệm được tích lũy qua nhiều năm.</p>
-    <h3>Những sản phẩm mang đậm bản sắc dân tộc</h3>
-    <p>Từ nghề dệt truyền thống, người Hrê tạo ra nhiều sản phẩm phục vụ đời sống như váy, khố, khăn đội đầu, tấm choàng và vải địu trẻ em. Không chỉ có giá trị sử dụng, mỗi sản phẩm còn mang giá trị thẩm mỹ và thể hiện nét văn hóa riêng của cộng đồng.</p>
-    <p>Bên cạnh nghề dệt, các hoạt động đan lát từ mây tre cũng gắn bó với đời sống người Hrê. Những chiếc gùi và vật dụng đựng, vận chuyển nông sản phản ánh sự khéo léo, khả năng tận dụng nguyên liệu tự nhiên và kinh nghiệm lao động của người dân.</p>
-    <h3>Gìn giữ nghề xưa, phát triển giá trị hôm nay</h3>
-    <p>Trong nhịp sống hiện đại, việc bảo tồn nghề thủ công truyền thống có ý nghĩa quan trọng đối với sự phát triển văn hóa và kinh tế cộng đồng. Các hoạt động truyền dạy kỹ thuật dệt, giới thiệu sản phẩm, quảng bá hình ảnh làng nghề và khuyến khích người trẻ tham gia đang góp phần duy trì sức sống của nghề truyền thống.</p>
-    <p>Làng Teng không chỉ là nơi lưu giữ kỹ thuật dệt thổ cẩm mà còn là điểm đến để du khách tìm hiểu văn hóa, gặp gỡ nghệ nhân và trải nghiệm những giá trị thủ công đặc sắc của người Hrê. Mỗi sản phẩm được tạo ra từ đôi bàn tay người thợ là một câu chuyện về lao động, sự sáng tạo và tình yêu đối với văn hóa dân tộc.</p>
-    <div style="text-align:center"><button class="article-close" onclick="toggleVanHoa(event, 'langnghe')">Đóng bài viết</button></div>
-  </div>
+  <div class="heading"><span>TINH HOA BÀN TAY NGHỆ NHÂN</span><h2>LÀNG NGHỀ THỦ CÔNG</h2><p>Làng nghề thủ công Hrê – Tinh hoa từ đôi bàn tay người bản địa</p></div>
+  <div class="article-shell">
+    <img class="article-cover" src="trang-phuc.jfif" alt="Sản phẩm thổ cẩm truyền thống Hrê" onerror="this.onerror=null;this.src='trangphuchre.jpg';">
+    <p>Từ những nguyên liệu gần gũi với núi rừng, cộng đồng người Hrê đã sáng tạo nên nhiều sản phẩm thủ công phục vụ đời sống. Trong đó, nghề dệt thổ cẩm là một nét văn hóa tiêu biểu, thể hiện sự khéo léo, óc sáng tạo và khả năng lưu giữ tri thức truyền thống của người dân.</p>
+    <h3>Nghề dệt thổ cẩm – Di sản của sự khéo léo</h3>
+    <p>Nhắc đến nghề thủ công truyền thống của người Hrê ở Quảng Ngãi, không thể không nhắc đến nghề dệt thổ cẩm tại Làng Teng, xã Ba Thành, khu vực Ba Tơ. Nghề dệt được lưu truyền qua nhiều thế hệ, gắn bó mật thiết với đời sống của người phụ nữ Hrê.</p>
+    <p>Từ những sợi bông, người thợ thực hiện các công đoạn chuẩn bị sợi, tạo màu, mắc sợi lên khung và dệt thành sản phẩm hoàn chỉnh. Nghề dệt thổ cẩm truyền thống của người Hrê ở xã Ba Thành đã được ghi danh là Di sản văn hóa phi vật thể quốc gia năm 2019.</p>
+    <h3>Kỹ thuật dệt và những hoa văn độc đáo</h3>
+    <p>Điểm đặc sắc của thổ cẩm Hrê nằm ở kỹ thuật tạo hoa văn ngay trong quá trình dệt. Người thợ phải tính toán, sắp xếp từng sợi chỉ để tạo nên các họa tiết theo ý muốn.</p>
+    <p>Màu đen và đỏ thường được sử dụng làm màu chủ đạo, kết hợp với màu trắng cùng những đường nét hình học và hình ảnh cách điệu từ thiên nhiên. Mỗi tấm vải là kết quả của sự kiên trì, tỉ mỉ và kinh nghiệm được tích lũy qua nhiều năm.</p>
+    <h3>Những sản phẩm mang đậm bản sắc dân tộc</h3>
+    <p>Từ nghề dệt truyền thống, người Hrê tạo ra nhiều sản phẩm phục vụ đời sống như váy, khố, khăn đội đầu, tấm choàng và vải địu trẻ em. Không chỉ có giá trị sử dụng, mỗi sản phẩm còn mang giá trị thẩm mỹ và thể hiện nét văn hóa riêng của cộng đồng.</p>
+    <p>Bên cạnh nghề dệt, các hoạt động đan lát từ mây tre cũng gắn bó với đời sống người Hrê. Những chiếc gùi và vật dụng đựng, vận chuyển nông sản phản ánh sự khéo léo, khả năng tận dụng nguyên liệu tự nhiên và kinh nghiệm lao động của người dân.</p>
+    <h3>Gìn giữ nghề xưa, phát triển giá trị hôm nay</h3>
+    <p>Trong nhịp sống hiện đại, việc bảo tồn nghề thủ công truyền thống có ý nghĩa quan trọng đối với sự phát triển văn hóa và kinh tế cộng đồng. Các hoạt động truyền dạy kỹ thuật dệt, giới thiệu sản phẩm, quảng bá hình ảnh làng nghề và khuyến khích người trẻ tham gia đang góp phần duy trì sức sống của nghề truyền thống.</p>
+    <p>Làng Teng không chỉ là nơi lưu giữ kỹ thuật dệt thổ cẩm mà còn là điểm đến để du khách tìm hiểu văn hóa, gặp gỡ nghệ nhân và trải nghiệm những giá trị thủ công đặc sắc của người Hrê. Mỗi sản phẩm được tạo ra từ đôi bàn tay người thợ là một câu chuyện về lao động, sự sáng tạo và tình yêu đối với văn hóa dân tộc.</p>
+    <div style="text-align:center"><button class="article-close" onclick="toggleVanHoa(event, 'langnghe')">Đóng bài viết</button></div>
+  </div>
 </section>
-
 <!-- ========================================== -->
 <!-- BÀI VIẾT DÂN CƯ VÀ PHÂN BỐ (Mặc định ẩn) -->
 <!-- ========================================== -->
 <section class="section" id="dancu" style="padding-top: 40px; display: none;">
-  <div class="heading">
-    <span>CỘNG ĐỒNG H'RÊ TRÊN VÙNG ĐẤT TRƯỜNG SƠN</span>
-    <h2>DÂN CƯ VÀ PHÂN BỐ ĐỊA LÝ</h2>
-    <p>Sức sống mãnh liệt nơi rẻo cao miền Trung – Tây Nguyên</p>
-  </div>
-  
-  <div style="max-width: 900px; margin: auto; background: #ffffff; padding: 45px 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); border-left: 6px solid var(--fire); border-right: 1px solid #f3e5db; border-top: 1px solid #f3e5db; border-bottom: 1px solid #f3e5db;">
-    <p style="font-size: 16.5px; margin-bottom: 20px; color: var(--text); line-height: 1.8; text-align: justify;">
-      <strong style="color: var(--earth);">Dân tộc H'rê</strong> là một trong những dân tộc thiểu số sinh sống lâu đời ở khu vực miền Trung Việt Nam, chủ yếu thuộc vùng núi phía Đông dãy Trường Sơn. Theo kết quả Tổng điều tra dân số và nhà ở năm 2019, dân tộc H'rê có tổng dân số 149.460 người.
-    </p>
-    <p style="font-size: 16.5px; margin-bottom: 20px; color: var(--text); line-height: 1.8; text-align: justify;">
-      Người H'rê phân bố tập trung đông nhất tại khu vực miền núi phía Tây tỉnh Quảng Ngãi, đặc biệt ở các địa bàn Sơn Hà, Ba Tơ và Minh Long (theo địa danh hành chính trước năm 2025). Ngoài ra, đồng bào còn sinh sống tại Sơn Tây, Trà Bồng, một số khu vực thuộc Nghĩa Hành, Tư Nghĩa và các địa bàn lân cận. Người H'rê cũng cư trú tại khu vực An Lão (Bình Định cũ, nay thuộc tỉnh Gia Lai) và một bộ phận sinh sống ở Kon Plông (Kon Tum cũ, nay thuộc tỉnh Quảng Ngãi).
-    </p>
-    <p style="font-size: 16.5px; margin-bottom: 20px; color: var(--text); line-height: 1.8; text-align: justify;">
-      Về điều kiện địa lý, cộng đồng H'rê chủ yếu cư trú ở vùng núi, thung lũng và các khu vực ven sông, suối thuộc sườn Đông dãy Trường Sơn. Một số địa bàn cư trú gắn với lưu vực sông Trà Khúc và sông Vệ. Đây là những khu vực có nguồn nước và đất đai thuận lợi cho hoạt động sản xuất nông nghiệp, đặc biệt là canh tác lúa nước.
-    </p>
-    <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-      Trải qua nhiều thế hệ, người H'rê đã hình thành các cộng đồng làng truyền thống, gọi là <strong>plây</strong>, gắn bó với môi trường tự nhiên và có mối quan hệ cộng đồng chặt chẽ. Dù sinh sống ở nhiều địa bàn khác nhau, đồng bào vẫn gìn giữ tiếng nói, trang phục, phong tục tập quán và những giá trị văn hóa truyền thống đặc sắc, góp phần tạo nên bản sắc văn hóa phong phú của vùng đất miền Trung – Tây Nguyên.
-    </p>
-    <div style="text-align: center; margin-top: 30px;">
-       <button onclick="toggleDanCu(event)" style="padding: 10px 24px; background: var(--fire); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">Đóng bài viết</button>
-    </div>
-  </div>
+  <div class="heading">
+    <span>CỘNG ĐỒNG H'RÊ TRÊN VÙNG ĐẤT TRƯỜNG SƠN</span>
+    <h2>DÂN CƯ VÀ PHÂN BỐ ĐỊA LÝ</h2>
+    <p>Sức sống mãnh liệt nơi rẻo cao miền Trung – Tây Nguyên</p>
+  </div>
+  
+  <div style="max-width: 900px; margin: auto; background: #ffffff; padding: 45px 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); border-left: 6px solid var(--fire); border-right: 1px solid #f3e5db; border-top: 1px solid #f3e5db; border-bottom: 1px solid #f3e5db;">
+    <p style="font-size: 16.5px; margin-bottom: 20px; color: var(--text); line-height: 1.8; text-align: justify;">
+      <strong style="color: var(--earth);">Dân tộc H'rê</strong> là một trong những dân tộc thiểu số sinh sống lâu đời ở khu vực miền Trung Việt Nam, chủ yếu thuộc vùng núi phía Đông dãy Trường Sơn. Theo kết quả Tổng điều tra dân số và nhà ở năm 2019, dân tộc H'rê có tổng dân số 149.460 người.
+    </p>
+    <p style="font-size: 16.5px; margin-bottom: 20px; color: var(--text); line-height: 1.8; text-align: justify;">
+      Người H'rê phân bố tập trung đông nhất tại khu vực miền núi phía Tây tỉnh Quảng Ngãi, đặc biệt ở các địa bàn Sơn Hà, Ba Tơ và Minh Long (theo địa danh hành chính trước năm 2025). Ngoài ra, đồng bào còn sinh sống tại Sơn Tây, Trà Bồng, một số khu vực thuộc Nghĩa Hành, Tư Nghĩa và các địa bàn lân cận. Người H'rê cũng cư trú tại khu vực An Lão (Bình Định cũ, nay thuộc tỉnh Gia Lai) và một bộ phận sinh sống ở Kon Plông (Kon Tum cũ, nay thuộc tỉnh Quảng Ngãi).
+    </p>
+    <p style="font-size: 16.5px; margin-bottom: 20px; color: var(--text); line-height: 1.8; text-align: justify;">
+      Về điều kiện địa lý, cộng đồng H'rê chủ yếu cư trú ở vùng núi, thung lũng và các khu vực ven sông, suối thuộc sườn Đông dãy Trường Sơn. Một số địa bàn cư trú gắn với lưu vực sông Trà Khúc và sông Vệ. Đây là những khu vực có nguồn nước và đất đai thuận lợi cho hoạt động sản xuất nông nghiệp, đặc biệt là canh tác lúa nước.
+    </p>
+    <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+      Trải qua nhiều thế hệ, người H'rê đã hình thành các cộng đồng làng truyền thống, gọi là <strong>plây</strong>, gắn bó với môi trường tự nhiên và có mối quan hệ cộng đồng chặt chẽ. Dù sinh sống ở nhiều địa bàn khác nhau, đồng bào vẫn gìn giữ tiếng nói, trang phục, phong tục tập quán và những giá trị văn hóa truyền thống đặc sắc, góp phần tạo nên bản sắc văn hóa phong phú của vùng đất miền Trung – Tây Nguyên.
+    </p>
+    <div style="text-align: center; margin-top: 30px;">
+       <button onclick="toggleDanCu(event)" style="padding: 10px 24px; background: var(--fire); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">Đóng bài viết</button>
+    </div>
+  </div>
 </section>
 
 <!-- ========================================== -->
 <!-- BÀI VIẾT TRIẾT LÝ ẨM THỰC (Mặc định ẩn) -->
 <!-- ========================================== -->
 <section class="section" id="trietly" style="padding-top: 40px; display: none;">
-  <div class="heading">
-    <span>LINH HỒN CỦA BẾP LỬA</span>
-    <h2>TRIẾT LÝ ẨM THỰC H'RÊ</h2>
-    <p>Hơi thở đại ngàn trong từng hương vị</p>
-  </div>
-  
-  <div style="max-width: 900px; margin: auto; background: #ffffff; padding: 45px 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); border-left: 6px solid var(--fire); border-right: 1px solid #f3e5db; border-top: 1px solid #f3e5db; border-bottom: 1px solid #f3e5db;">
-    <p style="font-size: 16.5px; margin-bottom: 20px; color: var(--text); line-height: 1.8; text-align: justify;">
-      Mâm cơm của người H'rê không bắt đầu từ những khu chợ sầm uất, mà cội nguồn của nó nằm ở triền rẫy, khe suối và những cánh rừng già. Ẩm thực nơi đây mang trong mình triết lý của sự nguyên bản và mộc mạc. Mỗi mớ rau dớn cắn vội giọt sương, búp măng le đầu mùa hay con cá niên vừa bắt lên từ suối đá đều là món quà thuần khiết mà mẹ thiên nhiên hào phóng ban tặng.
-    </p>
-    <p style="font-size: 16.5px; margin-bottom: 20px; color: var(--text); line-height: 1.8; text-align: justify;">
-      Không cầu kỳ tẩm ướp, chẳng phô trương hương liệu, người H'rê chuộng cách chế biến mộc mạc nhất như nướng ống tre, luộc, hay vùi trong tro nóng. Mượn vị thanh mát của nước suối, mùi ngai ngái của ống nứa tươi và hơi ấm rực rỡ của than hồng để làm chín thức ăn, người H'rê đã tạo nên một sự hòa quyện tuyệt đẹp giữa con người và vạn vật. Họ nương tựa vào rừng già, lấy đi sự sống nhưng luôn biết chừng mực và nâng niu trọn vẹn tinh túy ban sơ.
-    </p>
-    <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-      <strong style="color: var(--earth);">Ngồi quây quần bên bếp lửa bập bùng, nhấm nháp miếng thịt gác bếp dai ngọt cùng chóe rượu cần thơm hương men lá, ta mới hiểu hết cái hồn của người H'rê.</strong> Giản dị, chân chất nhưng lại đậm đà và nồng ấm vô cùng — ẩm thực nơi đây chính là tấm gương phản chiếu tâm hồn ngay thẳng, hiền hòa và tình yêu thiên nhiên mãnh liệt của những người con đại ngàn.
-    </p>
-    <div style="text-align: center; margin-top: 30px;">
-       <button onclick="toggleTrietLy(event)" style="padding: 10px 24px; background: var(--fire); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">Đóng bài viết</button>
-    </div>
-  </div>
+  <div class="heading">
+    <span>LINH HỒN CỦA BẾP LỬA</span>
+    <h2>TRIẾT LÝ ẨM THỰC H'RÊ</h2>
+    <p>Hơi thở đại ngàn trong từng hương vị</p>
+  </div>
+  
+  <div style="max-width: 900px; margin: auto; background: #ffffff; padding: 45px 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); border-left: 6px solid var(--fire); border-right: 1px solid #f3e5db; border-top: 1px solid #f3e5db; border-bottom: 1px solid #f3e5db;">
+    <p style="font-size: 16.5px; margin-bottom: 20px; color: var(--text); line-height: 1.8; text-align: justify;">
+      Mâm cơm của người H'rê không bắt đầu từ những khu chợ sầm uất, mà cội nguồn của nó nằm ở triền rẫy, khe suối và những cánh rừng già. Ẩm thực nơi đây mang trong mình triết lý của sự nguyên bản và mộc mạc. Mỗi mớ rau dớn cắn vội giọt sương, búp măng le đầu mùa hay con cá niên vừa bắt lên từ suối đá đều là món quà thuần khiết mà mẹ thiên nhiên hào phóng ban tặng.
+    </p>
+    <p style="font-size: 16.5px; margin-bottom: 20px; color: var(--text); line-height: 1.8; text-align: justify;">
+      Không cầu kỳ tẩm ướp, chẳng phô trương hương liệu, người H'rê chuộng cách chế biến mộc mạc nhất như nướng ống tre, luộc, hay vùi trong tro nóng. Mượn vị thanh mát của nước suối, mùi ngai ngái của ống nứa tươi và hơi ấm rực rỡ của than hồng để làm chín thức ăn, người H'rê đã tạo nên một sự hòa quyện tuyệt đẹp giữa con người và vạn vật. Họ nương tựa vào rừng già, lấy đi sự sống nhưng luôn biết chừng mực và nâng niu trọn vẹn tinh túy ban sơ.
+    </p>
+    <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+      <strong style="color: var(--earth);">Ngồi quây quần bên bếp lửa bập bùng, nhấm nháp miếng thịt gác bếp dai ngọt cùng chóe rượu cần thơm hương men lá, ta mới hiểu hết cái hồn của người H'rê.</strong> Giản dị, chân chất nhưng lại đậm đà và nồng ấm vô cùng — ẩm thực nơi đây chính là tấm gương phản chiếu tâm hồn ngay thẳng, hiền hòa và tình yêu thiên nhiên mãnh liệt của những người con đại ngàn.
+    </p>
+    <div style="text-align: center; margin-top: 30px;">
+       <button onclick="toggleTrietLy(event)" style="padding: 10px 24px; background: var(--fire); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">Đóng bài viết</button>
+    </div>
+  </div>
 </section>
 
 <!-- ========================================== -->
 <!-- BÀI VIẾT CÁC MÓN ĂN TRUYỀN THỐNG (Mặc định ẩn - Có layout hình ảnh) -->
 <!-- ========================================== -->
 <section class="section" id="monan" style="padding-top: 40px; display: none;">
-  <div class="heading">
-    <span>HƯƠNG VỊ NÚI RỪNG</span>
-    <h2>CÁC MÓN ĂN TRUYỀN THỐNG</h2>
-    <p>Đậm đà bản sắc ẩm thực của đồng bào H'rê</p>
-  </div>
-  
-  <div style="max-width: 1000px; margin: auto; background: #ffffff; padding: 45px 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); border-left: 6px solid var(--fire); border-right: 1px solid #f3e5db; border-top: 1px solid #f3e5db; border-bottom: 1px solid #f3e5db;">
-    
-    <!-- MÓN 1 -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px; border-bottom: 1px dashed #fed7aa; padding-bottom: 40px;">
-      <div style="flex: 1; min-width: 300px;">
-        <img src="rauranh.jpg" alt="Canh rau ranh ốc đá" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      </div>
-      <div style="flex: 1.5; min-width: 300px;">
-        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">1. Canh rau ranh, ốc đá</h3>
-        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-          Rau ranh và ốc đá là sự kết hợp hoàn hảo từ thiên nhiên ban tặng cho vùng cao. Rau ranh mọc hoang dã trên các triền đồi, phiến lá non nớt mang vị ngọt nhẩn đắng đặc trưng. Ốc đá bắt từ những khe suối trong vắt, thịt béo và giòn sần sật. Khi nấu canh chung, món ăn có vị thanh mát, ngòn ngọt, vừa giúp giải nhiệt trong những ngày hè oi ả, vừa là "phương thuốc" dân gian bồi bổ sức khỏe rất được đồng bào ưa chuộng.
-        </p>
-      </div>
-    </div>
+  <div class="heading">
+    <span>HƯƠNG VỊ NÚI RỪNG</span>
+    <h2>CÁC MÓN ĂN TRUYỀN THỐNG</h2>
+    <p>Đậm đà bản sắc ẩm thực của đồng bào H'rê</p>
+  </div>
+  
+  <div style="max-width: 1000px; margin: auto; background: #ffffff; padding: 45px 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); border-left: 6px solid var(--fire); border-right: 1px solid #f3e5db; border-top: 1px solid #f3e5db; border-bottom: 1px solid #f3e5db;">
+    
+    <!-- MÓN 1 -->
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px; border-bottom: 1px dashed #fed7aa; padding-bottom: 40px;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="rauranh.jpg" alt="Canh rau ranh ốc đá" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </div>
+      <div style="flex: 1.5; min-width: 300px;">
+        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">1. Canh rau ranh, ốc đá</h3>
+        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+          Rau ranh và ốc đá là sự kết hợp hoàn hảo từ thiên nhiên ban tặng cho vùng cao. Rau ranh mọc hoang dã trên các triền đồi, phiến lá non nớt mang vị ngọt nhẩn đắng đặc trưng. Ốc đá bắt từ những khe suối trong vắt, thịt béo và giòn sần sật. Khi nấu canh chung, món ăn có vị thanh mát, ngòn ngọt, vừa giúp giải nhiệt trong những ngày hè oi ả, vừa là "phương thuốc" dân gian bồi bổ sức khỏe rất được đồng bào ưa chuộng.
+        </p>
+      </div>
+    </div>
 
-    <!-- MÓN 2 (Layout đảo ngược để đổi gió) -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px; border-bottom: 1px dashed #fed7aa; padding-bottom: 40px; flex-direction: row-reverse;">
-      <div style="flex: 1; min-width: 300px;">
-        <img src="thittraugacbep2.jpg" alt="Thịt trâu gác bếp" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      </div>
-      <div style="flex: 1.5; min-width: 300px;">
-        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">2. Thịt trâu gác bếp</h3>
-        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-          Thịt trâu gác bếp không chỉ là món ăn dự trữ qua mùa mưa dầm mà còn là đặc sản để thiết đãi khách quý đến nhà. Những thớ thịt trâu tươi, săn chắc được thái dọc, tẩm ướp kỹ lưỡng với các loại gia vị nồng nàn của núi rừng như muối, ớt, tiêu rừng, sả... rồi treo lên gác bếp. Khói từ củi lửa cháy rả rích ngày qua ngày hun khô miếng thịt, làm quyện vào đó mùi hăng hăng ngai ngái của khói bếp, tạo nên vị ngọt đậm đà, dai ngon khó cưỡng khi xé từng thớ thịt.
-        </p>
-      </div>
-    </div>
+    <!-- MÓN 2 (Layout đảo ngược để đổi gió) -->
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px; border-bottom: 1px dashed #fed7aa; padding-bottom: 40px; flex-direction: row-reverse;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="thittraugacbep2.jpg" alt="Thịt trâu gác bếp" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </div>
+      <div style="flex: 1.5; min-width: 300px;">
+        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">2. Thịt trâu gác bếp</h3>
+        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+          Thịt trâu gác bếp không chỉ là món ăn dự trữ qua mùa mưa dầm mà còn là đặc sản để thiết đãi khách quý đến nhà. Những thớ thịt trâu tươi, săn chắc được thái dọc, tẩm ướp kỹ lưỡng với các loại gia vị nồng nàn của núi rừng như muối, ớt, tiêu rừng, sả... rồi treo lên gác bếp. Khói từ củi lửa cháy rả rích ngày qua ngày hun khô miếng thịt, làm quyện vào đó mùi hăng hăng ngai ngái của khói bếp, tạo nên vị ngọt đậm đà, dai ngon khó cưỡng khi xé từng thớ thịt.
+        </p>
+      </div>
+    </div>
 
-    <!-- MÓN 3 -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px;">
-      <div style="flex: 1; min-width: 300px;">
-        <img src="raudonxaotoi.jpg" alt="Rau dớn xào tỏi" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      </div>
-      <div style="flex: 1.5; min-width: 300px;">
-        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">3. Rau dớn xào tỏi</h3>
-        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-          Rau dớn là một loại cây thuộc họ dương xỉ, thường mọc nhiều ở những vách đá ven suối hay dưới tán rừng ẩm ướt. Phần ngon nhất để chế biến là những ngọn non tơ uốn cong cuộn tròn như vòi voi. Rau dớn chần sơ qua nước sôi rồi đem xào với tỏi phi thơm lừng. Món ăn tuy chế biến cực kỳ dân dã, đơn giản nhưng lại giữ được độ giòn sần sật, vị nhơn nhớt thanh mát quyện với chút chát nhẹ, vô cùng đưa cơm.
-        </p>
-      </div>
-    </div>
-    <!-- MÓN 4 (Layout đảo ngược để xen kẽ đẹp mắt) -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px; flex-direction: row-reverse;">
-      <div style="flex: 1; min-width: 300px;">
-        <img src="canienchammuoiot.jpg" alt="Cá niên nướng chấm muối ớt" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      </div>
-      <div style="flex: 1.5; min-width: 300px;">
-        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">4. Cá niên nướng chấm muối ớt</h3>
-        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-          Cá niên là món quà quý mà những dòng suối đá róc rách ban tặng cho đồng bào H'rê. Loài cá này chỉ sống ở nơi nước chảy xiết, thức ăn chủ yếu là rong rêu nên thịt cá rất sạch và săn chắc. Cách chế biến ngon nhất là để nguyên con nướng xém vàng rực trên than hồng, rồi bày mộc mạc lên mẹt tre lót lá chuối xanh. Gỡ miếng thịt cá béo ngậy, nhẩm chút vị đắng nhẫn đặc trưng của ruột cá, vắt thêm chút nước cốt chanh tươi, rồi quệt qua chén muối ớt xanh giã nhuyễn đựng trong chiếc ống tre nhỏ. Ăn kèm mớ rau rừng thanh mát, tất cả hòa quyện tạo nên một hương vị hoang sơ, đậm đà hơi thở của sương gió đại ngàn.
-        </p>
-      </div>
-    </div>
-   <!-- MÓN 5 -->
+    <!-- MÓN 3 -->
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="raudonxaotoi.jpg" alt="Rau dớn xào tỏi" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </div>
+      <div style="flex: 1.5; min-width: 300px;">
+        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">3. Rau dớn xào tỏi</h3>
+        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+          Rau dớn là một loại cây thuộc họ dương xỉ, thường mọc nhiều ở những vách đá ven suối hay dưới tán rừng ẩm ướt. Phần ngon nhất để chế biến là những ngọn non tơ uốn cong cuộn tròn như vòi voi. Rau dớn chần sơ qua nước sôi rồi đem xào với tỏi phi thơm lừng. Món ăn tuy chế biến cực kỳ dân dã, đơn giản nhưng lại giữ được độ giòn sần sật, vị nhơn nhớt thanh mát quyện với chút chát nhẹ, vô cùng đưa cơm.
+        </p>
+      </div>
+    </div>
+    <!-- MÓN 4 (Layout đảo ngược để xen kẽ đẹp mắt) -->
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px; flex-direction: row-reverse;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="canienchammuoiot.jpg" alt="Cá niên nướng chấm muối ớt" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </div>
+      <div style="flex: 1.5; min-width: 300px;">
+        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">4. Cá niên nướng chấm muối ớt</h3>
+        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+          Cá niên là món quà quý mà những dòng suối đá róc rách ban tặng cho đồng bào H'rê. Loài cá này chỉ sống ở nơi nước chảy xiết, thức ăn chủ yếu là rong rêu nên thịt cá rất sạch và săn chắc. Cách chế biến ngon nhất là để nguyên con nướng xém vàng rực trên than hồng, rồi bày mộc mạc lên mẹt tre lót lá chuối xanh. Gỡ miếng thịt cá béo ngậy, nhẩm chút vị đắng nhẫn đặc trưng của ruột cá, vắt thêm chút nước cốt chanh tươi, rồi quệt qua chén muối ớt xanh giã nhuyễn đựng trong chiếc ống tre nhỏ. Ăn kèm mớ rau rừng thanh mát, tất cả hòa quyện tạo nên một hương vị hoang sơ, đậm đà hơi thở của sương gió đại ngàn.
+        </p>
+      </div>
+    </div>
+   <!-- MÓN 5 -->
 <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px;">
-  <div style="flex: 1; min-width: 300px;">
-    <img src="cachuonkho.jpg" alt="Cá chuồn muối kho thịt heo" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-  </div>
-  <div style="flex: 1.5; min-width: 300px;">
-    <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">5. Cá chuồn muối kho thịt heo</h3>
-    <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-      Cá chuồn muối kho thịt heo là món ăn dân dã, đậm đà hương vị quê nhà, đặc biệt thích hợp trong những ngày đông se lạnh. Cá chuồn được muối để bảo quản lâu ngày, khi đem kho cùng thịt ba chỉ tạo nên sự kết hợp hấp dẫn giữa vị mặn mòi của cá và vị béo mềm của thịt heo. Cá được kho liu riu trên bếp lửa cùng hành, tiêu, ớt và các loại gia vị cho đến khi nước kho sánh lại, thấm đều vào từng thớ cá và miếng thịt. Mùi thơm nồng nàn lan tỏa từ nồi cá kho nóng hổi khiến ai cũng khó lòng cưỡng lại. Ăn cùng cơm trắng nóng, thêm chút rau luộc là đủ làm nên một bữa cơm quê ấm áp. Vị mặn mà, béo ngậy, cay cay hòa quyện khiến món ăn trở nên vô cùng hao cơm, đúng chất món ngon mùa đông của người dân miền quê.
-    </p>
-  </div>
+  <div style="flex: 1; min-width: 300px;">
+    <img src="cachuonkho.jpg" alt="Cá chuồn muối kho thịt heo" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+  </div>
+  <div style="flex: 1.5; min-width: 300px;">
+    <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">5. Cá chuồn muối kho thịt heo</h3>
+    <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+      Cá chuồn muối kho thịt heo là món ăn dân dã, đậm đà hương vị quê nhà, đặc biệt thích hợp trong những ngày đông se lạnh. Cá chuồn được muối để bảo quản lâu ngày, khi đem kho cùng thịt ba chỉ tạo nên sự kết hợp hấp dẫn giữa vị mặn mòi của cá và vị béo mềm của thịt heo. Cá được kho liu riu trên bếp lửa cùng hành, tiêu, ớt và các loại gia vị cho đến khi nước kho sánh lại, thấm đều vào từng thớ cá và miếng thịt. Mùi thơm nồng nàn lan tỏa từ nồi cá kho nóng hổi khiến ai cũng khó lòng cưỡng lại. Ăn cùng cơm trắng nóng, thêm chút rau luộc là đủ làm nên một bữa cơm quê ấm áp. Vị mặn mà, béo ngậy, cay cay hòa quyện khiến món ăn trở nên vô cùng hao cơm, đúng chất món ngon mùa đông của người dân miền quê.
+    </p>
+  </div>
 </div>
 
-    <div style="text-align: center; margin-top: 40px;">
-       <button onclick="toggleMonAn(event)" style="padding: 12px 28px; background: var(--fire); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">Đóng bài viết</button>
-    </div>
-  </div>
+    <div style="text-align: center; margin-top: 40px;">
+       <button onclick="toggleMonAn(event)" style="padding: 12px 28px; background: var(--fire); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">Đóng bài viết</button>
+    </div>
+  </div>
 </section>
 
 <!-- ========================================== -->
 <!-- BÀI VIẾT THỨC UỐNG TRUYỀN THỐNG (Mặc định ẩn) -->
 <!-- ========================================== -->
 <section class="section" id="thucuong" style="padding-top: 40px; display: none;">
-  <div class="heading">
-    <span>HƯƠNG MÊ SAY TỪ ĐẠI NGÀN</span>
-    <h2>RƯỢU CẦN & VĂN HÓA RƯỢU CHÉ</h2>
-    <p>Thức uống mang đậm hồn cốt đồng bào H'rê</p>
-  </div>
-  
-  <div style="max-width: 1000px; margin: auto; background: #ffffff; padding: 45px 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); border-left: 6px solid var(--fire); border-right: 1px solid #f3e5db; border-top: 1px solid #f3e5db; border-bottom: 1px solid #f3e5db;">
-    
-    <!-- PHẦN 1 -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px; border-bottom: 1px dashed #fed7aa; padding-bottom: 40px;">
-      <div style="flex: 1; min-width: 300px;">
-        <img src="uongruoucan2.jpg" alt="Tinh hoa nguyên liệu làm rượu cần" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      </div>
-      <div style="flex: 1.5; min-width: 300px;">
-        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">Tinh hoa từ những nguyên liệu ban sơ</h3>
-        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-          Rượu cần (hay rượu ché) của người H'rê được ủ từ những sản vật tinh túy nhất của nương rẫy: lúa tẻ, gạo nếp nương, hạt bo bo hoặc củ sắn. Linh hồn của ché rượu nằm ở loại <strong>men lá đặc biệt</strong>, được đồng bào chế tác kỳ công từ vỏ cây, rễ cây rừng, gừng, ớt và gạo thơm. Tất cả được ủ kín trong những chiếc ché (chóe) đất nung, bịt miệng bằng lá chuối khô qua nhiều tháng ngày để lên men tự nhiên. Khi uống, chỉ cần châm thêm dòng nước suối trong vắt đầu nguồn là hương thơm của nếp nương và men rừng đã tỏa ngát không gian.
-        </p>
-      </div>
-    </div>
+  <div class="heading">
+    <span>HƯƠNG MÊ SAY TỪ ĐẠI NGÀN</span>
+    <h2>RƯỢU CẦN & VĂN HÓA RƯỢU CHÉ</h2>
+    <p>Thức uống mang đậm hồn cốt đồng bào H'rê</p>
+  </div>
+  
+  <div style="max-width: 1000px; margin: auto; background: #ffffff; padding: 45px 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); border-left: 6px solid var(--fire); border-right: 1px solid #f3e5db; border-top: 1px solid #f3e5db; border-bottom: 1px solid #f3e5db;">
+    
+    <!-- PHẦN 1 -->
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px; border-bottom: 1px dashed #fed7aa; padding-bottom: 40px;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="uongruoucan2.jpg" alt="Tinh hoa nguyên liệu làm rượu cần" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </div>
+      <div style="flex: 1.5; min-width: 300px;">
+        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">Tinh hoa từ những nguyên liệu ban sơ</h3>
+        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+          Rượu cần (hay rượu ché) của người H'rê được ủ từ những sản vật tinh túy nhất của nương rẫy: lúa tẻ, gạo nếp nương, hạt bo bo hoặc củ sắn. Linh hồn của ché rượu nằm ở loại <strong>men lá đặc biệt</strong>, được đồng bào chế tác kỳ công từ vỏ cây, rễ cây rừng, gừng, ớt và gạo thơm. Tất cả được ủ kín trong những chiếc ché (chóe) đất nung, bịt miệng bằng lá chuối khô qua nhiều tháng ngày để lên men tự nhiên. Khi uống, chỉ cần châm thêm dòng nước suối trong vắt đầu nguồn là hương thơm của nếp nương và men rừng đã tỏa ngát không gian.
+        </p>
+      </div>
+    </div>
 
-    <!-- PHẦN 2 (Layout đảo ngược chữ qua trái, ảnh qua phải) -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px; flex-direction: row-reverse;">
-      <div style="flex: 1; min-width: 300px;">
-        <img src="uongruoucan.jpg" alt="Văn hóa kết nối cộng đồng bên ché rượu" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      </div>
-      <div style="flex: 1.5; min-width: 300px;">
-        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">Văn hóa kết nối cộng đồng bên ché rượu</h3>
-        <p style="font-size: 16.5px; margin-bottom: 15px; color: var(--text); line-height: 1.8; text-align: justify;">
-          Khác với người miền xuôi rót rượu ra chén, người H'rê thưởng thức rượu bằng những chiếc cần làm từ cây trúc đục thông ruột cắm trực tiếp vào ché. Đối với họ, uống rượu cần không chỉ để say, mà là một nghi thức văn hóa mang tính cộng đồng sâu sắc. Trong các dịp lễ hội như mừng lúa mới, lễ cúng bến nước, hay khi đón khách quý, chóe rượu luôn được đặt trang trọng ở vị trí trung tâm của nhà sàn, bên cạnh bếp lửa rực hồng.
-        </p>
-        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-          Văn hóa vít cần rượu thể hiện tinh thần đoàn kết, bình đẳng và hiếu khách. Mọi người ngồi quây quần thành vòng tròn, cùng chung một ché, chung một nhịp cần, không phân biệt thân sơ. Khách quý bao giờ cũng được gia chủ trân trọng mời cầm cần uống trước. Nhấp một ngụm rượu ngọt thanh, cay nồng nơi đầu lưỡi, ta như uống trọn cả hơi thở của đại ngàn, nghe tiếng chiêng vang vọng và cảm nhận được tình người H'rê nồng ấm, chân chất.
-        </p>
-      </div>
-    </div>
+    <!-- PHẦN 2 (Layout đảo ngược chữ qua trái, ảnh qua phải) -->
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px; flex-direction: row-reverse;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="uongruoucan.jpg" alt="Văn hóa kết nối cộng đồng bên ché rượu" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </div>
+      <div style="flex: 1.5; min-width: 300px;">
+        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">Văn hóa kết nối cộng đồng bên ché rượu</h3>
+        <p style="font-size: 16.5px; margin-bottom: 15px; color: var(--text); line-height: 1.8; text-align: justify;">
+          Khác với người miền xuôi rót rượu ra chén, người H'rê thưởng thức rượu bằng những chiếc cần làm từ cây trúc đục thông ruột cắm trực tiếp vào ché. Đối với họ, uống rượu cần không chỉ để say, mà là một nghi thức văn hóa mang tính cộng đồng sâu sắc. Trong các dịp lễ hội như mừng lúa mới, lễ cúng bến nước, hay khi đón khách quý, chóe rượu luôn được đặt trang trọng ở vị trí trung tâm của nhà sàn, bên cạnh bếp lửa rực hồng.
+        </p>
+        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+          Văn hóa vít cần rượu thể hiện tinh thần đoàn kết, bình đẳng và hiếu khách. Mọi người ngồi quây quần thành vòng tròn, cùng chung một ché, chung một nhịp cần, không phân biệt thân sơ. Khách quý bao giờ cũng được gia chủ trân trọng mời cầm cần uống trước. Nhấp một ngụm rượu ngọt thanh, cay nồng nơi đầu lưỡi, ta như uống trọn cả hơi thở của đại ngàn, nghe tiếng chiêng vang vọng và cảm nhận được tình người H'rê nồng ấm, chân chất.
+        </p>
+      </div>
+    </div>
 
-    <div style="text-align: center; margin-top: 40px;">
-       <button onclick="toggleThucUong(event)" style="padding: 12px 28px; background: var(--fire); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">Đóng bài viết</button>
-    </div>
-  </div>
+    <div style="text-align: center; margin-top: 40px;">
+       <button onclick="toggleThucUong(event)" style="padding: 12px 28px; background: var(--fire); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">Đóng bài viết</button>
+    </div>
+  </div>
 </section>
 
 <!-- ========================================== -->
 <!-- BÀI VIẾT LỄ MỪNG LÚA MỚI (Mặc định ẩn) -->
 <!-- ========================================== -->
 <section class="section" id="mungluamoi" style="padding-top: 40px; display: none;">
-  <div class="heading">
-    <span>TẠ ƠN ĐẤT TRỜI</span>
-    <h2>LỄ HỘI MỪNG LÚA MỚI</h2>
-    <p>Nét đẹp tâm linh và tinh thần gắn kết cộng đồng của người H'rê</p>
-  </div>
-  
-  <div style="max-width: 1000px; margin: auto; background: #ffffff; padding: 45px 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); border-left: 6px solid var(--fire); border-right: 1px solid #f3e5db; border-top: 1px solid #f3e5db; border-bottom: 1px solid #f3e5db;">
-    
-    <!-- PHẦN 1 -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px; border-bottom: 1px dashed #fed7aa; padding-bottom: 40px;">
-      <div style="flex: 1; min-width: 300px;">
-        <img src="luaray.jpg" alt="Nghi thức cúng lúa mới" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      </div>
-      <div style="flex: 1.5; min-width: 300px;">
-        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">Ý nghĩa thiêng liêng của Lễ mừng lúa mới</h3>
-        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-          Lễ mừng lúa mới (hay còn gọi là Tết rạ) là nghi lễ quan trọng bậc nhất trong năm của đồng bào H'rê. Sau khi kết thúc mùa vụ, lúa đã được đưa về đầy kho, các gia đình và bản làng sẽ tổ chức lễ cúng để tạ ơn thần linh (Yang), thần lúa và ông bà tổ tiên đã ban cho một mùa màng bội thu, mưa thuận gió hòa, con cháu khỏe mạnh. Đây cũng là dịp để cầu mong cho vụ mùa năm sau tiếp tục no ấm, lúa ngô trĩu hạt.
-        </p>
-      </div>
-    </div>
+  <div class="heading">
+    <span>TẠ ƠN ĐẤT TRỜI</span>
+    <h2>LỄ HỘI MỪNG LÚA MỚI</h2>
+    <p>Nét đẹp tâm linh và tinh thần gắn kết cộng đồng của người H'rê</p>
+  </div>
+  
+  <div style="max-width: 1000px; margin: auto; background: #ffffff; padding: 45px 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.08); border-left: 6px solid var(--fire); border-right: 1px solid #f3e5db; border-top: 1px solid #f3e5db; border-bottom: 1px solid #f3e5db;">
+    
+    <!-- PHẦN 1 -->
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 40px; border-bottom: 1px dashed #fed7aa; padding-bottom: 40px;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="luaray.jpg" alt="Nghi thức cúng lúa mới" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </div>
+      <div style="flex: 1.5; min-width: 300px;">
+        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">Ý nghĩa thiêng liêng của Lễ mừng lúa mới</h3>
+        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+          Lễ mừng lúa mới (hay còn gọi là Tết rạ) là nghi lễ quan trọng bậc nhất trong năm của đồng bào H'rê. Sau khi kết thúc mùa vụ, lúa đã được đưa về đầy kho, các gia đình và bản làng sẽ tổ chức lễ cúng để tạ ơn thần linh (Yang), thần lúa và ông bà tổ tiên đã ban cho một mùa màng bội thu, mưa thuận gió hòa, con cháu khỏe mạnh. Đây cũng là dịp để cầu mong cho vụ mùa năm sau tiếp tục no ấm, lúa ngô trĩu hạt.
+        </p>
+      </div>
+    </div>
 
-    <!-- PHẦN 2 (Đảo ngược ảnh sang phải) -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px; flex-direction: row-reverse;">
-      <div style="flex: 1; min-width: 300px;">
-        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80" alt="Không khí lễ hội" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      </div>
-      <div style="flex: 1.5; min-width: 300px;">
-        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">Rộn ràng âm vang ngày hội</h3>
-        <p style="font-size: 16.5px; margin-bottom: 15px; color: var(--text); line-height: 1.8; text-align: justify;">
-          Lễ vật dâng lên thần linh không thể thiếu mâm cơm gạo mới thơm lừng, ché rượu cần ủ men lá rừng đượm vị, cùng thịt heo, thịt gà bản. Lễ cúng thường diễn ra tại không gian thiêng liêng nhất của ngôi nhà sàn, do già làng làm chủ tế đối với lễ chung của bản, và gia trưởng làm chủ tế tại gia đình.
-        </p>
-        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
-          Sau phần lễ trang nghiêm là phần hội tưng bừng. Cả bản làng cùng quây quần bên ché rượu cần, thưởng thức những món ăn truyền thống. Tiếng cồng chiêng ngân vang khắp núi rừng, hòa cùng điệu múa uyển chuyển của các thiếu nữ và những làn điệu dân ca Ta-lêu, Ca-choi say đắm lòng người. Lễ mừng lúa mới thực sự là sợi dây tâm linh bền chặt, gắn kết cộng đồng người H'rê qua bao thế hệ.
-        </p>
-      </div>
-    </div>
+    <!-- PHẦN 2 (Đảo ngược ảnh sang phải) -->
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px; flex-direction: row-reverse;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80" alt="Không khí lễ hội" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </div>
+      <div style="flex: 1.5; min-width: 300px;">
+        <h3 style="color: var(--earth); margin-bottom: 15px; font-size: 24px;">Rộn ràng âm vang ngày hội</h3>
+        <p style="font-size: 16.5px; margin-bottom: 15px; color: var(--text); line-height: 1.8; text-align: justify;">
+          Lễ vật dâng lên thần linh không thể thiếu mâm cơm gạo mới thơm lừng, ché rượu cần ủ men lá rừng đượm vị, cùng thịt heo, thịt gà bản. Lễ cúng thường diễn ra tại không gian thiêng liêng nhất của ngôi nhà sàn, do già làng làm chủ tế đối với lễ chung của bản, và gia trưởng làm chủ tế tại gia đình.
+        </p>
+        <p style="font-size: 16.5px; color: var(--text); line-height: 1.8; text-align: justify;">
+          Sau phần lễ trang nghiêm là phần hội tưng bừng. Cả bản làng cùng quây quần bên ché rượu cần, thưởng thức những món ăn truyền thống. Tiếng cồng chiêng ngân vang khắp núi rừng, hòa cùng điệu múa uyển chuyển của các thiếu nữ và những làn điệu dân ca Ta-lêu, Ca-choi say đắm lòng người. Lễ mừng lúa mới thực sự là sợi dây tâm linh bền chặt, gắn kết cộng đồng người H'rê qua bao thế hệ.
+        </p>
+      </div>
+    </div>
 
-    <div style="text-align: center; margin-top: 40px;">
-       <button onclick="toggleMungLuaMoi(event)" style="padding: 12px 28px; background: var(--fire); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">Đóng bài viết</button>
-    </div>
-  </div>
+    <div style="text-align: center; margin-top: 40px;">
+       <button onclick="toggleMungLuaMoi(event)" style="padding: 12px 28px; background: var(--fire); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">Đóng bài viết</button>
+    </div>
+  </div>
 </section>
 
 <section class="quote" id="lehoi">
- <h2>GIỮ LỬA BẢN SẮC - THẮP SÁNG TƯƠNG LAI</h2>
- <p>Văn hóa tựa như ngọn lửa thiêng giữa trung tâm nhà sàn. Chỉ cần cộng đồng còn trân trọng, còn trao truyền, thì hơi ấm của tiếng chiêng, của màu thổ cẩm sẽ mãi trường tồn cùng thời gian.</p>
+ <h2>GIỮ LỬA BẢN SẮC - THẮP SÁNG TƯƠNG LAI</h2>
+ <p>Văn hóa tựa như ngọn lửa thiêng giữa trung tâm nhà sàn. Chỉ cần cộng đồng còn trân trọng, còn trao truyền, thì hơi ấm của tiếng chiêng, của màu thổ cẩm sẽ mãi trường tồn cùng thời gian.</p>
 </section>
 
 <section class="section" id="thuvien">
- <div class="heading">
-  <span>GÓC KÝ ỨC</span>
-  <h2>THƯ VIỆN HÌNH ẢNH</h2>
-  <p>Lưu giữ vẻ đẹp thiên nhiên, con người và những khoảnh khắc đời sống văn hóa đồng bào H'rê.</p>
- </div>
- <div class="library">
-  <a href="sonnu.jpg" class="glightbox gallery-item" data-title="Các cô sơn nữ">
-    <img src="sonnu.jpg" alt="Các cô sơn nữ" onerror="this.src='https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80'">
-  </a>
-  <a href="cauca.jpg" class="glightbox gallery-item" data-title="Câu cá">
-    <img src="cauca.jpg" alt="Câu cá" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80'">
-  </a>
-  <a href="hoanghonbatrang.jpg" class="glightbox gallery-item" data-title="Hoàng hôn">
-    <img src="hoanghonbatrang.jpg" alt="Hoàng hôn" onerror="this.src='https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80'">
-  </a>
-  <a href="naubanhtet.jpg" class="glightbox gallery-item" data-title="Nấu bánh Tết">
-    <img src="naubanhtet.jpg" alt="Nấu bánh Tết" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80'">
-  </a>
-   <a href="naubanhtet1.jpg" class="glightbox gallery-item" data-title="Nấu bánh Tết">
-    <img src="naubanhtet1.jpg" alt="Nấu bánh Tết" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80'">
-  </a>
-  <a href="cohuong.jpg" class="glightbox gallery-item" data-title="Cô gái H'rê">
-    <img src="cohuong.jpg" alt="Cô gái H'rê" onerror="this.src='https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80'">
-  </a>
-  <a href="cohuongnaubanh.jpg" class="glightbox gallery-item" data-title="Cô gái H'rê bên nồi bánh Tết">
-    <img src="cohuongnaubanh.jpg" alt="Cô gái H'rê bên nồi Bánh Tết" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80'">
-  </a>
-  <a href="trangphuchre.jpg" class="glightbox gallery-item" data-title="Sơn nữ">
-    <img src="trangphuchre.jpg" alt="Sơn nữ" onerror="this.src='https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80'">
-  </a>
-    <a href="lehoiamthuc.jpg" class="glightbox gallery-item" data-title="Lễ hội Ẩm thực">
-    <img src="lehoiamthuc.jpg" alt="Lễ hội Ẩm thực">
-  </a>
-  <a href="coyen2.jpg" class="glightbox gallery-item" data-title="Sơn nữ H'rê">
-    <img src="coyen2.jpg" alt="Sơn nữ H'rê">
-  </a>
-  <a href="coyen3.jpg" class="glightbox gallery-item" data-title="Sơn nữ H'rê">
-    <img src="coyen3.jpg" alt="Sơn nữ H'rê">
-  </a>
-  <a href="coyenlop1.jpg" class="glightbox gallery-item" data-title="Cô giáo H'rê">
-    <img src="coyenlop1.jpg" alt="Cô giáo H'rê">
-  </a>
-  <a href="tapthecogiao.jpg" class="glightbox gallery-item" data-title="Tập thể cô giáo H'rê">
-    <img src="tapthecogiao.jpg" alt="Tập thể cô giáo H'rê">
-  </a>
-  <a href="cogiaoyen.jpg" class="glightbox gallery-item" data-title="Cô giáo H'rê">
-    <img src="cogiaoyen.jpg" alt="Cô giáo H'rê">
-  </a>
-  <a href="cobe.jpg" class="glightbox gallery-item" data-title="Thiếu nữ H'rê">
-    <img src="cobe.jpg" alt="Thiếu nữ H'rê">
-  </a>
-  <a href="cobe2.jpg" class="glightbox gallery-item" data-title="Thiếu nữ H'rê">
-    <img src="cobe2.jpg" alt="Thiếu nữ H'rê">
-  </a>
-  <a href="bongbi.jpg" class="glightbox gallery-item" data-title="Cụ bà hái rau">
-    <img src="bongbi.jpg" alt="Cụ bà hái rau">
-  </a>
-  <a href="sarung.jpg" class="glightbox gallery-item" data-title="Trái sả rừng">
-    <img src="sarung.jpg" alt="Trái sả rừng">
-  </a>
-  <a href="vannghehre.jpg" class="glightbox gallery-item" data-title="Đội Văn nghệ Bùi Hui">
-    <img src="vannghehre.jpg" alt="Đội Văn nghệ Bùi Hui">
-  </a> 
-   <a href="uongruoucan.jpg" class="glightbox gallery-item" data-title="Uống rượu Cần">
-    <img src="uongruoucan.jpg" alt="Uống rượu Cần">
-   </a> 
-    <a href="uongruoucan2.jpg" class="glightbox gallery-item" data-title="Uống rượu Cần">
-    <img src="uongruoucan2.jpg" alt="Uống rượu Cần">
-   </a> 
-     <a href="damtrau.jpg" class="glightbox gallery-item" data-title="Lễ hội Đâm trâu">
-    <img src="damtrau.jpg" alt="Lễ hội Đâm trâu">
-   </a> 
-    <a href="ruongbacthang.jpg" class="glightbox gallery-item" data-title="Ruộng Nước Tên">
-    <img src="ruongbacthang.jpg" alt=" Ruộng Nước Tên">
-   </a> 
-    <a href="traumacao.jpg" class="glightbox gallery-item" data-title="Cái rét Ba Trang">
-    <img src="traumacao.jpg" alt=" Cái rét Ba Trang">
-   </a> 
-    <a href="hoasim.jpg" class="glightbox gallery-item" data-title="Sim tím chiều đông">
-    <img src="hoasim.jpg" alt="Sim tím chiều đông">
-   </a> 
-  <a href="cungnhamoi.jpg" class="glightbox gallery-item" data-title="Lễ Cúng nhà mới">
-    <img src="cungnhamoi.jpg" alt="Lễ Cúng nhà mới" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80'">
-  </a>
-    <a href="hocsinh.jpg" class="glightbox gallery-item" data-title="Học sinh xã Ba Trang">
-    <img src="hocsinh.jpg" alt="Học sinh xã Ba Trang">
-  </a>
+ <div class="heading">
+  <span>GÓC KÝ ỨC</span>
+  <h2>THƯ VIỆN HÌNH ẢNH</h2>
+  <p>Lưu giữ vẻ đẹp thiên nhiên, con người và những khoảnh khắc đời sống văn hóa đồng bào H'rê.</p>
+ </div>
+ <div class="library">
+  <a href="sonnu.jpg" class="glightbox gallery-item" data-title="Các cô sơn nữ">
+    <img src="sonnu.jpg" alt="Các cô sơn nữ" onerror="this.src='https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80'">
+  </a>
+  <a href="cauca.jpg" class="glightbox gallery-item" data-title="Câu cá">
+    <img src="cauca.jpg" alt="Câu cá" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80'">
+  </a>
+  <a href="hoanghonbatrang.jpg" class="glightbox gallery-item" data-title="Hoàng hôn">
+    <img src="hoanghonbatrang.jpg" alt="Hoàng hôn" onerror="this.src='https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80'">
+  </a>
+  <a href="naubanhtet.jpg" class="glightbox gallery-item" data-title="Nấu bánh Tết">
+    <img src="naubanhtet.jpg" alt="Nấu bánh Tết" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80'">
+  </a>
+   <a href="naubanhtet1.jpg" class="glightbox gallery-item" data-title="Nấu bánh Tết">
+    <img src="naubanhtet1.jpg" alt="Nấu bánh Tết" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80'">
+  </a>
+  <a href="cohuong.jpg" class="glightbox gallery-item" data-title="Cô gái H'rê">
+    <img src="cohuong.jpg" alt="Cô gái H'rê" onerror="this.src='https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80'">
+  </a>
+  <a href="cohuongnaubanh.jpg" class="glightbox gallery-item" data-title="Cô gái H'rê bên nồi bánh Tết">
+    <img src="cohuongnaubanh.jpg" alt="Cô gái H'rê bên nồi Bánh Tết" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80'">
+  </a>
+  <a href="trangphuchre.jpg" class="glightbox gallery-item" data-title="Sơn nữ">
+    <img src="trangphuchre.jpg" alt="Sơn nữ" onerror="this.src='https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80'">
+  </a>
+    <a href="lehoiamthuc.jpg" class="glightbox gallery-item" data-title="Lễ hội Ẩm thực">
+    <img src="lehoiamthuc.jpg" alt="Lễ hội Ẩm thực">
+  </a>
+  <a href="coyen2.jpg" class="glightbox gallery-item" data-title="Sơn nữ H'rê">
+    <img src="coyen2.jpg" alt="Sơn nữ H'rê">
+  </a>
+  <a href="coyen3.jpg" class="glightbox gallery-item" data-title="Sơn nữ H'rê">
+    <img src="coyen3.jpg" alt="Sơn nữ H'rê">
+  </a>
+  <a href="coyenlop1.jpg" class="glightbox gallery-item" data-title="Cô giáo H'rê">
+    <img src="coyenlop1.jpg" alt="Cô giáo H'rê">
+  </a>
+  <a href="tapthecogiao.jpg" class="glightbox gallery-item" data-title="Tập thể cô giáo H'rê">
+    <img src="tapthecogiao.jpg" alt="Tập thể cô giáo H'rê">
+  </a>
+  <a href="cogiaoyen.jpg" class="glightbox gallery-item" data-title="Cô giáo H'rê">
+    <img src="cogiaoyen.jpg" alt="Cô giáo H'rê">
+  </a>
+  <a href="cobe.jpg" class="glightbox gallery-item" data-title="Thiếu nữ H'rê">
+    <img src="cobe.jpg" alt="Thiếu nữ H'rê">
+  </a>
+  <a href="cobe2.jpg" class="glightbox gallery-item" data-title="Thiếu nữ H'rê">
+    <img src="cobe2.jpg" alt="Thiếu nữ H'rê">
+  </a>
+  <a href="bongbi.jpg" class="glightbox gallery-item" data-title="Cụ bà hái rau">
+    <img src="bongbi.jpg" alt="Cụ bà hái rau">
+  </a>
+  <a href="sarung.jpg" class="glightbox gallery-item" data-title="Trái sả rừng">
+    <img src="sarung.jpg" alt="Trái sả rừng">
+  </a>
+  <a href="vannghehre.jpg" class="glightbox gallery-item" data-title="Đội Văn nghệ Bùi Hui">
+    <img src="vannghehre.jpg" alt="Đội Văn nghệ Bùi Hui">
+  </a> 
+   <a href="uongruoucan.jpg" class="glightbox gallery-item" data-title="Uống rượu Cần">
+    <img src="uongruoucan.jpg" alt="Uống rượu Cần">
+   </a> 
+    <a href="uongruoucan2.jpg" class="glightbox gallery-item" data-title="Uống rượu Cần">
+    <img src="uongruoucan2.jpg" alt="Uống rượu Cần">
+   </a> 
+     <a href="damtrau.jpg" class="glightbox gallery-item" data-title="Lễ hội Đâm trâu">
+    <img src="damtrau.jpg" alt="Lễ hội Đâm trâu">
+   </a> 
+    <a href="ruongbacthang.jpg" class="glightbox gallery-item" data-title="Ruộng Nước Tên">
+    <img src="ruongbacthang.jpg" alt=" Ruộng Nước Tên">
+   </a> 
+    <a href="traumacao.jpg" class="glightbox gallery-item" data-title="Cái rét Ba Trang">
+    <img src="traumacao.jpg" alt=" Cái rét Ba Trang">
+   </a> 
+    <a href="hoasim.jpg" class="glightbox gallery-item" data-title="Sim tím chiều đông">
+    <img src="hoasim.jpg" alt="Sim tím chiều đông">
+   </a> 
+  <a href="cungnhamoi.jpg" class="glightbox gallery-item" data-title="Lễ Cúng nhà mới">
+    <img src="cungnhamoi.jpg" alt="Lễ Cúng nhà mới" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80'">
+  </a>
+    <a href="hocsinh.jpg" class="glightbox gallery-item" data-title="Học sinh xã Ba Trang">
+    <img src="hocsinh.jpg" alt="Học sinh xã Ba Trang">
+  </a>
 <a href="hocsinhbatrang.jpg" class="glightbox gallery-item" data-title="Học sinh trải nghiệm thảo nguyên Bùi Hui">
-  <img src="hocsinhbatrang.jpg" alt="Học sinh trải nghiệm thảo nguyên Bùi Hui">
+  <img src="hocsinhbatrang.jpg" alt="Học sinh trải nghiệm thảo nguyên Bùi Hui">
 </a>
 
 <a href="goibanhladong.jpg" class="glightbox gallery-item" data-title="Học sinh gói bánh lá dong">
-  <img src="goibanhladong.jpg" alt="Học sinh gói bánh lá dong">
+  <img src="goibanhladong.jpg" alt="Học sinh gói bánh lá dong">
 </a>
 
 <a href="goibanhladong4.jpg" class="glightbox gallery-item" data-title="Học sinh gói bánh lá dong">
-  <img src="goibanhladong4.jpg" alt="Học sinh gói bánh lá dong">
+  <img src="goibanhladong4.jpg" alt="Học sinh gói bánh lá dong">
 </a>
 
 <a href="goibanhladong2.jpg" class="glightbox gallery-item" data-title="Học sinh gói bánh lá dong">
-  <img src="goibanhladong2.jpg" alt="Học sinh gói bánh lá dong">
+  <img src="goibanhladong2.jpg" alt="Học sinh gói bánh lá dong">
 </a>
 <a href="goibanhladong3.jpg" class="glightbox gallery-item" data-title="Học sinh gói bánh lá dong">
-  <img src="goibanhladong3.jpg" alt="Học sinh gói bánh lá dong">
+  <img src="goibanhladong3.jpg" alt="Học sinh gói bánh lá dong">
 </a>
 <a href="nhaysap.jpg" class="glightbox gallery-item" data-title="Nhảy sạp">
-  <img src="nhaysap.jpg" alt="Nhảy sạp">
+  <img src="nhaysap.jpg" alt="Nhảy sạp">
 </a>
 <a href="nhaysap2.jpg" class="glightbox gallery-item" data-title="Nhảy sạp">
-  <img src="nhaysap2.jpg" alt="Nhảy sạp">
+  <img src="nhaysap2.jpg" alt="Nhảy sạp">
 </a>
 <a href="nhaysap3.jpg" class="glightbox gallery-item" data-title="Nhảy sạp">
-  <img src="nhaysap3.jpg" alt="Nhảy sạp">
+  <img src="nhaysap3.jpg" alt="Nhảy sạp">
 </a>
- </div>
- <div class="callout">
-  <h3>Chung tay góp củi giữ lửa di sản H'rê</h3>
-  <p>Kính mời các nghệ nhân, thế hệ trẻ và những người yêu văn hóa cùng chung tay đóng góp câu chuyện, tư liệu, hình ảnh để kho tàng di sản H'rê ngày càng thêm rực rỡ.</p>
- </div>
+ </div>
+ <div class="callout">
+  <h3>Chung tay góp củi giữ lửa di sản H'rê</h3>
+  <p>Kính mời các nghệ nhân, thế hệ trẻ và những người yêu văn hóa cùng chung tay đóng góp câu chuyện, tư liệu, hình ảnh để kho tàng di sản H'rê ngày càng thêm rực rỡ.</p>
+ </div>
 </section>
 
 <!-- ========================================== -->
 <!-- BẮT ĐẦU PHẦN BẢN ĐỒ GOOGLE MAP -->
 <!-- ========================================== -->
 <section class="section" id="diadiem" style="padding-top: 0;">
-  <div class="heading" style="margin-bottom: 30px;">
-    <span>ĐỊA ĐIỂM</span>
-    <h2>ĐẾN VỚI KHÔNG GIAN VĂN HÓA</h2>
-    <p>Trường PTDTBT TH& THCS Ba Trang, Quảng Ngãi</p>
-  </div>
-  <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.15); border: 1px solid #f3e5db;">
-    <iframe src="https://maps.google.com/maps?q=Trường+PTDTBT+TH+và+THCS+Ba+Trang,+Quảng+Ngãi&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </div>
+  <div class="heading" style="margin-bottom: 30px;">
+    <span>ĐỊA ĐIỂM</span>
+    <h2>ĐẾN VỚI KHÔNG GIAN VĂN HÓA</h2>
+    <p>Trường PTDTBT TH& THCS Ba Trang, Quảng Ngãi</p>
+  </div>
+  <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(156, 75, 34, 0.15); border: 1px solid #f3e5db;">
+    <iframe src="https://maps.google.com/maps?q=Trường+PTDTBT+TH+và+THCS+Ba+Trang,+Quảng+Ngãi&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
 </section>
 
 <footer>
- <div class="footer-inner">
-  <div>
-   <h3>KHÔNG GIAN VĂN HÓA CỘNG ĐỒNG H'RÊ</h3>
-   <p>Bản sắc - Kết nối - Bảo tồn và phát huy.</p>
-  </div>
-  <div>
-   <h3>THÔNG TIN LIÊN HỆ</h3>
-   <p>Nền tảng lưu giữ tư liệu văn hóa bản địa.</p>
-   <p>Địa điểm: Trường PTDTBT TH& THCS Ba Trang, xã Đặng Thuỳ Trâm, Quảng Ngãi.</p>
-   
-   <div class="visitor-counter">
-     <p>Lượt truy cập:
-        <span class="digit">3</span>
-        <span class="digit">2</span>
-        <span class="digit">1</span>
-        <span class="digit">6</span>
-        <span class="digit">0</span>
-        <span class="digit">9</span>
-        <span class="digit">0</span>
-     </p>
-     <p id="live-time">Thời gian: --:--:-- - --/--/----</p>
-   </div>
-  </div>
- </div>
- <div class="copyright">© 2026 - KHÔNG GIAN VĂN HÓA CỘNG ĐỒNG H'RÊ | Cùng giữ ngọn lửa văn hóa dân tộc.</div>
+ <div class="footer-inner">
+  <div>
+   <h3>KHÔNG GIAN VĂN HÓA CỘNG ĐỒNG H'RÊ</h3>
+   <p>Bản sắc - Kết nối - Bảo tồn và phát huy.</p>
+  </div>
+  <div>
+   <h3>THÔNG TIN LIÊN HỆ</h3>
+   <p>Nền tảng lưu giữ tư liệu văn hóa bản địa.</p>
+   <p>Địa điểm: Trường PTDTBT TH& THCS Ba Trang, xã Đặng Thuỳ Trâm, Quảng Ngãi.</p>
+   
+   <div class="visitor-counter">
+     <p>Lượt truy cập:
+        <span class="digit">3</span>
+        <span class="digit">2</span>
+        <span class="digit">1</span>
+        <span class="digit">6</span>
+        <span class="digit">0</span>
+        <span class="digit">9</span>
+        <span class="digit">0</span>
+     </p>
+     <p id="live-time">Thời gian: --:--:-- - --/--/----</p>
+   </div>
+  </div>
+ </div>
+ <div class="copyright">© 2026 - KHÔNG GIAN VĂN HÓA CỘNG ĐỒNG H'RÊ | Cùng giữ ngọn lửa văn hóa dân tộc.</div>
 </footer>
 
 <!-- ========================================== -->
@@ -922,116 +919,116 @@ footer p { font-size: 15px; margin-bottom: 10px; color: #fbd38d; }
 <script>
 // 1. Khởi tạo GLightbox
 const lightbox = GLightbox({
-    selector: '.glightbox',
-    touchNavigation: true,
-    loop: true,
-    zoomable: true
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    zoomable: true
 });
 
 // 2. Đóng menu mobile khi click (ĐÃ CẬP NHẬT ĐỂ ÁP DỤNG CẢ CHO MENU CON)
 document.querySelectorAll('nav a').forEach(link => {
- link.addEventListener('click', (e) => {
-  // Chỉ ẩn menu nếu thiết bị là Mobile và link click không chứa dấu '▾' (không phải là thẻ bấm mở menu con)
-  if(window.innerWidth <= 850 && !link.textContent.includes('▾')) {
-   document.querySelector('nav').classList.remove('open');
-  }
- });
+ link.addEventListener('click', (e) => {
+  // Chỉ ẩn menu nếu thiết bị là Mobile và link click không chứa dấu '▾' (không phải là thẻ bấm mở menu con)
+  if(window.innerWidth <= 850 && !link.textContent.includes('▾')) {
+   document.querySelector('nav').classList.remove('open');
+  }
+ });
 });
 
 // 3. Bật/tắt nhánh con trong thẻ bài (Dropdown)
 function toggleMenu(event) {
-  event.preventDefault(); 
-  var menu = document.getElementById("nhanhCon");
-  menu.classList.toggle("hien-thi");
+  event.preventDefault(); 
+  var menu = document.getElementById("nhanhCon");
+  menu.classList.toggle("hien-thi");
 }
 
 // 4. Hàm điều khiển 4 bài viết Văn Hóa (MỚI BỔ SUNG)
 function toggleVanHoa(event, articleId) {
-  if(event) event.preventDefault();
-  
-  var section = document.getElementById(articleId);
-  if (section.style.display === "none" || section.style.display === "") {
-    section.style.display = "block";
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  } else {
-    section.style.display = "none";
-  }
+  if(event) event.preventDefault();
+  
+  var section = document.getElementById(articleId);
+  if (section.style.display === "none" || section.style.display === "") {
+    section.style.display = "block";
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    section.style.display = "none";
+  }
 }
 
 // 5. Ẩn/Hiện bài viết Triết lý ẩm thực
 function toggleTrietLy(event) {
-  if(event) event.preventDefault(); 
-  
-  var section = document.getElementById("trietly");
-  if (section.style.display === "none" || section.style.display === "") {
-    section.style.display = "block";
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
-  } else {
-    section.style.display = "none";
-  }
+  if(event) event.preventDefault(); 
+  
+  var section = document.getElementById("trietly");
+  if (section.style.display === "none" || section.style.display === "") {
+    section.style.display = "block";
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+  } else {
+    section.style.display = "none";
+  }
 }
 
 // 6. Ẩn/Hiện bài viết Các món ăn truyền thống
 function toggleMonAn(event) {
-  if(event) event.preventDefault(); 
-  
-  var section = document.getElementById("monan");
-  if (section.style.display === "none" || section.style.display === "") {
-    section.style.display = "block";
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
-  } else {
-    section.style.display = "none";
-  }
+  if(event) event.preventDefault(); 
+  
+  var section = document.getElementById("monan");
+  if (section.style.display === "none" || section.style.display === "") {
+    section.style.display = "block";
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+  } else {
+    section.style.display = "none";
+  }
 }
 
 // 7. Ẩn/Hiện bài viết Dân cư
 function toggleDanCu(event) {
-  if(event) event.preventDefault();
-  
-  var section = document.getElementById("dancu");
-  if (section.style.display === "none" || section.style.display === "") {
-    section.style.display = "block";
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
-  } else {
-    section.style.display = "none";
-  }
+  if(event) event.preventDefault();
+  
+  var section = document.getElementById("dancu");
+  if (section.style.display === "none" || section.style.display === "") {
+    section.style.display = "block";
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+  } else {
+    section.style.display = "none";
+  }
 }
 
 // 8. Ẩn/Hiện bài viết Thức uống truyền thống
 function toggleThucUong(event) {
-  if(event) event.preventDefault(); 
-  
-  var section = document.getElementById("thucuong");
-  if (section.style.display === "none" || section.style.display === "") {
-    section.style.display = "block";
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
-  } else {
-    section.style.display = "none";
-  }
+  if(event) event.preventDefault(); 
+  
+  var section = document.getElementById("thucuong");
+  if (section.style.display === "none" || section.style.display === "") {
+    section.style.display = "block";
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+  } else {
+    section.style.display = "none";
+  }
 }
 
 // 9. Ẩn/Hiện bài viết Lễ mừng lúa mới
 function toggleMungLuaMoi(event) {
-  if(event) event.preventDefault(); 
-  
-  var section = document.getElementById("mungluamoi");
-  if (section.style.display === "none" || section.style.display === "") {
-    section.style.display = "block";
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
-  } else {
-    section.style.display = "none";
-  }
+  if(event) event.preventDefault(); 
+  
+  var section = document.getElementById("mungluamoi");
+  if (section.style.display === "none" || section.style.display === "") {
+    section.style.display = "block";
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+  } else {
+    section.style.display = "none";
+  }
 }
 
 // 10. Đồng hồ thời gian thực
 function updateClock() {
-    const now = new Date();
-    const timeStr = now.toLocaleTimeString('vi-VN', { hour12: false });
-    const dateStr = now.toLocaleDateString('vi-VN');
-    const timeEl = document.getElementById('live-time');
-    if(timeEl) {
-        timeEl.innerHTML = `Thời gian: <strong>${timeStr} - ${dateStr}</strong>`;
-    }
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('vi-VN', { hour12: false });
+    const dateStr = now.toLocaleDateString('vi-VN');
+    const timeEl = document.getElementById('live-time');
+    if(timeEl) {
+        timeEl.innerHTML = `Thời gian: <strong>${timeStr} - ${dateStr}</strong>`;
+    }
 }
 setInterval(updateClock, 1000);
 updateClock();
