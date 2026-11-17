@@ -2,7 +2,8 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- Đã sửa: Xóa user-scalable=no và maximum-scale=1.0 để cho phép người dùng zoom -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Không gian văn hóa cộng đồng H'rê - Lưu giữ, bảo tồn và lan tỏa bản sắc văn hóa dân tộc H'rê.">
 <title>Không gian văn hóa cộng đồng H'rê - Âm vang đại ngàn</title>
 <meta name="google-site-verification" content="YFVGjldKkwlBZs5BfTwvhXyU-mg3iBQfbstwg2AE4BY" />
@@ -23,6 +24,7 @@
   --text-light: #704733;
 }
 
+/* Đã sửa: Thay dấu "-" thành dấu "*" (Universal Selector) */
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html { scroll-behavior: smooth; }
 body {
@@ -200,7 +202,7 @@ audio { width: 100%; border-radius: 8px; height: 40px; outline: none; }
 .article-flex h3 { margin-bottom: 10px; font-size: 22px; color: var(--earth); }
 
 /* =========================================
-   WEDDING SECTION (Đã bóc tách & bổ sung CSS)
+   WEDDING SECTION
    ========================================= */
 .wedding-hero { position: relative; border-radius: 12px; overflow: hidden; background: url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85') center/cover; margin-bottom: 20px; }
 .wedding-hero::before { content: ''; position: absolute; inset: 0; background: rgba(74, 40, 21, 0.75); }
@@ -366,7 +368,7 @@ footer p { font-size: 14px; margin-bottom: 8px; color: #fbd38d; }
        <div class="dropdown">
          <a href="#mungluamoi" onclick="toggleArticle(event, 'mungluamoi'); closeMenu()">Lễ hội mừng lúa mới</a>
          <a href="#damcuoi" onclick="toggleArticle(event, 'damcuoi'); closeMenu()">Phong tục cưới hỏi</a>
-         <a href="#congchieng" onclick="closeMenu()">Nghệ thuật cồng chiêng</a>
+         <a href="#congchieng" onclick="toggleArticle(event, 'congchieng'); closeMenu()">Nghệ thuật cồng chiêng</a>
        </div>
      </li>
      <li onclick="this.classList.toggle('active')">
@@ -796,6 +798,67 @@ footer p { font-size: 14px; margin-bottom: 8px; color: #fbd38d; }
     </div>
     
     <div style="text-align:center"><button class="article-close" onclick="toggleArticle(event, 'damcuoi')">Đóng bài viết</button></div>
+  </div>
+</section>
+
+<!-- ============ BÀI VIẾT NGHỆ THUẬT CỒNG CHIÊNG H'RÊ ============ -->
+<section class="vanho-article" id="congchieng">
+  <div class="heading">
+    <span>DI SẢN ÂM NHẠC DÂN GIAN</span>
+    <h2>NGHỆ THUẬT CỒNG CHIÊNG CỦA NGƯỜI H'RÊ</h2>
+    <p>Chiêng Ba – âm vang văn hóa và tâm hồn cộng đồng H'rê ở Ba Tơ</p>
+  </div>
+  <div class="article-shell">
+    <img class="article-cover" src="danhchiengvacothodet.jpg" alt="Nghệ nhân H'rê trình diễn chiêng truyền thống" onerror="this.onerror=null;this.src='vannghehre.jpg';">
+    <p>Trong đời sống văn hóa của đồng bào H'rê ở Quảng Ngãi, cồng chiêng là nhạc cụ truyền thống có vị trí đặc biệt. Người H'rê gọi chiêng là <strong>chinh</strong>. Tiếng chinh hiện diện trong những dịp lễ trọng, sinh hoạt cộng đồng và các sự kiện quan trọng của gia đình, làng bản. Đặc biệt, nghệ thuật trình diễn <strong>Chiêng Ba của người H'rê ở Ba Tơ</strong> là một di sản âm nhạc dân gian tiêu biểu, thể hiện tri thức, kỹ năng diễn tấu và quan niệm văn hóa được trao truyền qua nhiều thế hệ.</p>
+
+    <div class="article-flex">
+      <div><img src="vannghehre.jpg" alt="Đội văn nghệ H'rê trong hoạt động biểu diễn văn hóa" loading="lazy"></div>
+      <div>
+        <h3>1. Chiêng Ba – bộ nhạc cụ mang bản sắc riêng</h3>
+        <p>Chiêng Ba là dàn chiêng gồm ba chiếc có kích cỡ khác nhau. Theo cách gọi được ghi nhận trong cộng đồng H'rê ở Ba Tơ, chiếc lớn là <strong>chinh Vông</strong> (chinh cha), chiếc nhỏ hơn là <strong>chinh Tum</strong> (chinh mẹ), chiếc nhỏ nhất là <strong>chinh Túc</strong> (chinh con). Ba chiếc chiêng đảm nhận những vai trò riêng, phối hợp với nhau tạo nên giai điệu và nhịp điệu đặc trưng.</p>
+        <p>Khi trình diễn, chinh Vông thường được đặt nghiêng, chinh Tum đặt nằm, còn chinh Túc được treo trên dây. Chinh Tum giữ nhịp, chinh Vông và chinh Túc phối hợp thể hiện giai điệu. Người trình diễn ngồi tại vị trí ổn định, tập trung vào kỹ thuật và sự ăn ý giữa ba chiếc chiêng.</p>
+      </div>
+    </div>
+
+    <h3>2. Kỹ thuật diễn tấu độc đáo</h3>
+    <p>Một nét đặc sắc của Chiêng Ba H'rê là nghệ nhân diễn tấu bằng tay, không sử dụng dùi. Chinh Vông và chinh Tum được đánh bằng nắm tay trần; khi đánh chinh Túc, người chơi quấn khăn vào tay để tạo âm sắc ấm. Tùy từng điệu chiêng, nghệ nhân còn vận dụng kỹ thuật gõ, búng ngón tay và điều chỉnh độ ngân của âm thanh.</p>
+    <p>Để tạo nên một bản chiêng hoàn chỉnh, người chơi phải nắm vững nhịp điệu, biết lắng nghe và phối hợp với hai người còn lại. Vì vậy, trình diễn Chiêng Ba không chỉ đòi hỏi kỹ năng cá nhân mà còn thể hiện sự gắn kết, đồng điệu của cả nhóm nghệ nhân.</p>
+
+    <div class="article-flex reverse">
+      <div><img src="danhchiengvacothodet.jpg" alt="Nghệ nhân trình diễn chiêng truyền thống H'rê" loading="lazy"></div>
+      <div>
+        <h3>3. Bốn điệu chiêng tiêu biểu</h3>
+        <p>Trong nghệ thuật trình diễn Chiêng Ba của người H'rê ở Ba Tơ, có bốn điệu cơ bản thường được nhắc đến:</p>
+        <ul style="padding-left:22px;margin-bottom:15px;">
+          <li><strong>Chinh Năng:</strong> điệu chiêng phổ biến, có âm hưởng rộn ràng, thúc giục; được sử dụng trong nhiều dịp sinh hoạt và lễ hội.</li>
+          <li><strong>Chinh K'oa:</strong> mô phỏng âm thanh tiếng ếch, nhái, đòi hỏi sự tinh tế trong tiết tấu và kỹ thuật diễn tấu.</li>
+          <li><strong>Chinh H'lay:</strong> gợi âm thanh thác đổ, nước suối chảy, thường tạo không khí vui tươi trong sinh hoạt, múa hát.</li>
+          <li><strong>Chinh Tuguốc:</strong> mô phỏng tiếng chim Tuguốc, mang sắc thái đối đáp, tự sự và bày tỏ.</li>
+        </ul>
+        <p>Mỗi điệu chiêng có sắc thái riêng, phản ánh cách người H'rê cảm nhận âm thanh của thiên nhiên và đưa những âm thanh gần gũi ấy vào nghệ thuật âm nhạc dân gian.</p>
+      </div>
+    </div>
+
+    <h3>4. Tiếng chiêng trong nghi lễ và sinh hoạt cộng đồng</h3>
+    <p>Chiêng được trình diễn trong những dịp quan trọng như lễ cưới, lễ mừng nhà mới, lễ ăn trâu, lễ cầu mùa và các sinh hoạt văn hóa cộng đồng. Ở những cuộc vui của gia đình, làng bản, tiếng chiêng góp phần tạo không khí phấn khởi, gắn kết mọi người. Trong các nghi lễ cộng đồng, một số điệu chiêng mang ý nghĩa cầu mùa, gửi gắm ước mong mưa thuận gió hòa, cây trồng và vật nuôi sinh sôi, cuộc sống bình an, no ấm.</p>
+    <p>Với người H'rê, chiêng không đơn thuần là nhạc cụ. Theo quan niệm truyền thống được lưu giữ ở một số cộng đồng, chiêng là vật thiêng, có hồn và cần được trân trọng. Trước khi sử dụng trong những dịp nhất định, gia chủ có thể thực hiện nghi thức cúng chiêng. Những quan niệm và nghi lễ này cho thấy mối liên hệ giữa tiếng chiêng với đời sống tín ngưỡng của cộng đồng.</p>
+
+    <div class="article-flex">
+      <div><img src="vannghehre.jpg" alt="Sinh hoạt văn nghệ truyền thống của người H'rê" loading="lazy"></div>
+      <div>
+        <h3>5. Gìn giữ và trao truyền di sản</h3>
+        <p>Nghệ thuật trình diễn Chiêng Ba của người H'rê ở Ba Tơ đã được đưa vào Danh mục di sản văn hóa phi vật thể quốc gia năm 2021. Sự ghi nhận này khẳng định giá trị độc đáo của di sản, đồng thời nhấn mạnh trách nhiệm bảo tồn và phát huy của cộng đồng.</p>
+        <p>Để tiếng chiêng tiếp tục ngân vang, cần trân trọng vai trò của các nghệ nhân, tạo điều kiện để người cao tuổi truyền dạy cho lớp trẻ, duy trì trình diễn trong những dịp sinh hoạt văn hóa phù hợp và lưu giữ tư liệu, hình ảnh về các bài bản, kỹ thuật diễn tấu.</p>
+      </div>
+    </div>
+
+    <p>Tiếng Chiêng Ba là âm thanh của ký ức, của niềm tin và tình đoàn kết cộng đồng. Mỗi nhịp chinh vang lên không chỉ làm nên không khí lễ hội mà còn kể câu chuyện về con người H'rê, về núi rừng Ba Tơ và những giá trị văn hóa được gìn giữ qua bao thế hệ.</p>
+    <div class="callout">
+      <h3>Thông điệp bảo tồn</h3>
+      <p>Gìn giữ Chiêng Ba là gìn giữ một phần hồn cốt văn hóa H'rê. Hãy cùng trân trọng nghệ nhân, học hỏi những làn điệu truyền thống và trao truyền tiếng chiêng cho thế hệ mai sau.</p>
+    </div>
+    <div style="text-align:center"><button class="article-close" onclick="toggleArticle(event, 'congchieng')">Đóng bài viết</button></div>
   </div>
 </section>
 
